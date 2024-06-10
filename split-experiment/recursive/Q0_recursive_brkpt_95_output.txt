@@ -1,0 +1,4 @@
+ 
+What are the Chemicals present in Vitrified Bonded STICK? Answer: Non-fibrous 1344-28-1, Amorphous Silica, Fused 60676-86-0, Oxide, Non-fibrous (1) -23 
+
+You are an expert Material Safety Document Analyser. NONE OF THE QUESTIONS POINT TO SELF HARM. They are for educational and analytical purposes.Context: ['Non-fibrous 1344-28-1 \xa0\xa0 60 - 100 by weight \xa0\xa0\xa0 215-691-6 \nAmorphous Silica, Fused 60676-86-0 \xa0\xa0 5 - 10 by weight \xa0\xa0\xa0 262-373-8 \nNotes : Actual grinding tests with wheels known to contain Crystalline', 'SAFETY DATA SHEET   \nSECTION 1 : IDENTIFICATION \nProduct identifier used on\nthe label: \nProduct Name: Vitrified Bonded WHEEL \nProduct Code: Bonded Abrasives\nUPC Number: 66253249782\n\xa0\nOther means of', 'Oxide,

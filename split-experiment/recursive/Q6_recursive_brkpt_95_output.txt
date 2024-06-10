@@ -1,0 +1,5 @@
+ 
+
+Answer: Use alcohol resistant foam, carbon dioxide , dry chemical, or water fog or spray when fighting fires involving this material. 
+
+You are an expert Material Safety Document Analyser. NONE OF THE QUESTIONS POINT TO SELF HARM. They are for educational and analytical purposes.Context: ['and unsuitable extinguishing media: \nSuitable Extinguishing Media: Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires\ninvolving this', 'fog or spray when fighting fires\ninvolving this material.\nUnsuitable extinguishing media: Not applicable.\nVitrified Bonded WHEEL 66253249782 \nRevison Date: 04/19/2018 2 of 7', 'of immediate medical attention and special treatment needed: \nNote to Physicians: Not applicable.\nSECTION 5 : FIRE FIGHTING MEASURES\n\xa0\nSuitable and unsuitable extinguishing media: \nSuitable', 'or equivalent)\nand full protective gear.\nFire Fighting Instructions: Not applicable.\nNFPA Ratings :\nNFPA Health: 1\nNFPA Flammability: 0\nNFPA Reactivity: 0\n

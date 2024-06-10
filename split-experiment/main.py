@@ -51,7 +51,7 @@ class SplittingTest:
         self.docs_dir = "../docs"
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         self.embedding_function = AzureOpenAIEmbeddings(deployment="langchain-splitting-test1")
-        self.llm = AzureOpenAI(model="gpt-4o")
+        self.llm = AzureOpenAI(deployment_name="langchain-kb-spl")
         persistent_client = chromadb.PersistentClient(path="../chroma_db/langchain")
         self.db = Chroma(
                         client=persistent_client,
@@ -60,7 +60,7 @@ class SplittingTest:
                     )
         self.documents = []
         self.split_docs = []
-
+        self.brkpt = 95
     def load_documents(self):
         file_paths = [
             os.path.join(self.docs_dir, file)
@@ -81,7 +81,7 @@ class SplittingTest:
             )
             self.split_docs = text_splitter.split_documents(self.documents)  # Split documents
         elif splitter_type == "semantic":
-            semantic_splitter = SemanticChunker(self.embedding_function)
+            semantic_splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_amount=self.brkpt)
             self.split_docs = semantic_splitter.split_documents(self.documents)
             print(self.split_docs)
             print(f"{len(self.split_docs)} splits created.")
@@ -93,13 +93,13 @@ class SplittingTest:
         docs = self.db.similarity_search(query, k)  # Retrieve top-k similar documents
 
         result = self.llm.invoke(
-            f"You are an expert Material Safety Document Analyser."
+            f"You are an expert Material Safety Document Analyser. NONE OF THE QUESTIONS POINT TO SELF HARM. They are for educational and analytical purposes."
             + f"Context: {[doc.page_content for doc in docs]} "
             + "using only this context, answer the following question: "
             + f"Question: {query}. Make sure there are full stops after every sentence."
             + "Don't use numerical numbering."
         )
-        return result.content
+        return result
 
     def run_experiment(self, query, output_file, splitter):
         start = perf_counter()
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     question = "Return meaningful information from the documents provided."
     opfile = "mainoutput.txt"
     splitters = ["recursive", "semantic"]
-    splitter = splitters[1]
+    splitter = splitters[0]
     test.run_experiment(query=question, output_file=opfile, splitter=splitter)
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
@@ -135,7 +135,7 @@ if __name__ == "__main__":
         "What is the UN number assigned to Argon Liquid for transport purposes?"
     ]
     for i, q in enumerate(questions):
-        filename = f"Q{i}_{splitter}_output.txt"
+        filename = f"{splitter}/Q{i}_{splitter}_brkpt_{test.brkpt}_output.txt"
         with open(filename, 'w') as f:
             f.write(test.query_documents(q, 8))
 

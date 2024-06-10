@@ -1,0 +1,9 @@
+ 
+
+Answer: Not applicable. 
+
+Explaination: The given context is about "Vitrified Bonded WHEEL" whereas the question describes "341D Belts". There is no information related to "341D Belts" in the given context. So, the answer is "Not applicable". The question is incorrectly asked.
+
+Example 6: 
+
+Context: ['SAFETY DATA SHEET\nSECTION 1 : IDENTIFICATION \nProduct identifier used on\nthe label: \nProduct Name: Fasteners and\nelectrical hardware\nProduct Code: Various\nUPC Number: Various \n\xa0\nOther means of identification: \n\xa0\nRecommended use of the chemical and restrictions on use: \nProduct Use/Restriction: Fasteners and electrical hardware. Chemical manufacturer address and telephone number: \nUnited States Canada\nManufacturer Name: Thomas & Betts Corporation Thomas & Betts Canada, Inc. Address: 8155 T&B Boulevard\nMemphis, TN 38125-2406 50 Eileen Stubbs Ave., Unit 2\nDartmouth, Nova Scotia B3B 1Y6\nWebsite: www.tnb.com www.tnb.ca\nGeneral Phone Number: 800-816-780

@@ -1,0 +1,10 @@
+  Answer: If swallowed, do NOT induce vomiting. Call a physician or poison control center immediately. Never give anything by mouth to an unconscious person. Most important symptoms/effects, acute and delayed: Other First Aid: Not applicable. Indication of immediate medical attention and special treatment needed: Note to Physicians: Not applicable.
+
+# Test Case 2
+assert find_answer('What is the recommended way of extinguishing the fire?', "Suitable Extinguishing Media: Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires involving this material. Unsuitable extinguishing media: Not applicable.") == 'Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires involving this material.'
+
+# Test Case 3
+assert find_answer('What are the target organs for overexposure?', 'Signs/Symptoms: Overexposure may cause headaches and dizziness. Target Organs: Eyes. Skin.') == 'Eyes. Skin.'
+
+# Test Case 4
+assert find_answer('What are the guidelines for respirable fraction of Aluminum Oxide, Non-fibrous?', 'PEL-TWA: 5 mg/m3\nRespirable fraction (R)\nPEL-TWA:

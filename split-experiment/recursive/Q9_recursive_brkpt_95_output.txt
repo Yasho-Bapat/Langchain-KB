@@ -1,0 +1,14 @@
+ Answer as a word. 
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+Agron Liquid is not classified as hazardous material for transportation
+
+You are an expert Material Safety Document Analyser. NONE OF THE QUESTIONS POINT TO SELF HARM. They are for educational and analytical purposes.Context: ['\nSECTION 14 : TRANSPORT INFORMATION\nUN number: Not regulated as hazardous material for transportation.\nUN proper shipping name: Not', 'material for transportation.\nSpecial precautions for user: Not regulated as hazardous material for transportation.\nSECTION 15 : REGULATORY INFORMATION\nSafety, health and environmental regulations', 'US, call\nCHEMTREC: 800

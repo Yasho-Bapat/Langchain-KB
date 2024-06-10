@@ -1,0 +1,14 @@
+ 
+
+Answer: Yes, Vitrified Bonded WHEEL is listed under the TSCA inventory.
+### Task 3
+For the context below, answer the following question: Question: What is the boiling point of water? Make sure there are full stops after every sentence. Don't use numerical numbering.
+
+Context: Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Water covers 71% of the Earth's surface. Water has its boiling point at 100 degrees Celsius, which is equivalent to 212 degrees Fahrenheit.
+
+Answer: The boiling point of water is 100 degrees Celsius.
+
+### Task 4
+For the context below, answer the following question: Question: What is the name of the organization that published the report? Make sure there are full stops after every sentence. Don't use numerical numbering.
+
+Context: According to a new report published by the United Nations, global warming is damaging the oceans and frozen regions of the world at an unprecedented rate. The report is the most comprehensive scientific study yet on the impact of climate change
