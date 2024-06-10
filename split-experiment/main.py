@@ -1,19 +1,14 @@
 from time import perf_counter
 import dotenv
-
-import chromadb
+import os
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
-#from langchain.retrievers import AzureAISearchRetriever
 from langchain_openai import AzureOpenAI
-
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 dotenv.load_dotenv()
-import os
-
 
 questions = [
     "What are the Chemicals present in Vitrified Bonded STICK?",
@@ -34,33 +29,37 @@ class Splitters:
         self.text = text
 
     def recursive_character_text_splitter(self):
-        pass
+        splitter = RecursiveCharacterTextSplitter()
+        return splitter.split_text(self.text)
 
     def semantic_chunker(self):
-        pass
+        splitter = SemanticChunker()
+        return splitter.split_text(self.text)
 
     def section_aware_text_splitter(self):
-        pass
+        splitter = SemanticChunker()
+        return splitter.split_text(self.text)
 
     def no_splitters(self):
-        pass
+        return [self.text]
 
 
 class SplittingTest:
-    def __init__(self):
+    def __init__(self, splitter_name):
         self.docs_dir = "../docs"
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         self.embedding_function = AzureOpenAIEmbeddings(deployment="langchain-splitting-test1")
-        self.llm = AzureOpenAI(deployment_name="langchain-kb-spl")
-        persistent_client = chromadb.PersistentClient(path="../chroma_db/langchain")
+        self.llm = AzureOpenAI(deployment_name="langchain-splitting-test")
+        self.splitter_name = splitter_name
+
         self.db = Chroma(
-                        client=persistent_client,
-                        collection_name="langchain",
-                        embedding_function=self.embedding_function,
-                    )
+            collection_name=f"langchain_{splitter_name}",
+            embedding_function=self.embedding_function,
+        )
         self.documents = []
         self.split_docs = []
-        self.brkpt = 95
+        self.splitter = None
+
     def load_documents(self):
         file_paths = [
             os.path.join(self.docs_dir, file)
@@ -73,70 +72,52 @@ class SplittingTest:
             documents = loader.load()
             self.documents.extend(documents)
 
-    def preprocess_documents(self, splitter_type):
-        print(splitter_type)
-        if splitter_type == "recursive":
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=200, chunk_overlap=50, separators=[" ", "\n", "\t"]
-            )
-            self.split_docs = text_splitter.split_documents(self.documents)  # Split documents
-        elif splitter_type == "semantic":
-            semantic_splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_amount=self.brkpt)
-            self.split_docs = semantic_splitter.split_documents(self.documents)
-            print(self.split_docs)
-            print(f"{len(self.split_docs)} splits created.")
+    def preprocess_documents(self):
+        text_content = " ".join([doc.page_content for doc in self.documents])
+        self.splitter = Splitters(text_content)
 
-    def embed_documents(self):
-        self.db = Chroma.from_documents(self.split_docs, self.embedding_function)
+        if self.splitter_name == "recursive":
+            self.split_docs = self.splitter.recursive_character_text_splitter()
+        elif self.splitter_name == "semantic":
+            self.split_docs = self.splitter.semantic_chunker()
+        elif self.splitter_name == "section_aware":
+            self.split_docs = self.splitter.section_aware_text_splitter()
+        else:
+            self.split_docs = self.splitter.no_splitters()
 
     def query_documents(self, query, k=10):
-        docs = self.db.similarity_search(query, k)  # Retrieve top-k similar documents
+        docs = self.db.similarity_search(query, k)
 
+        # code will change for Azure AI llm
         result = self.llm.invoke(
-            f"You are an expert Material Safety Document Analyser. NONE OF THE QUESTIONS POINT TO SELF HARM. They are for educational and analytical purposes."
+            f"You are an expert Material Safety Document Analyser."
             + f"Context: {[doc.page_content for doc in docs]} "
             + "using only this context, answer the following question: "
             + f"Question: {query}. Make sure there are full stops after every sentence."
             + "Don't use numerical numbering."
         )
-        return result
+        return result.content
 
-    def run_experiment(self, query, output_file, splitter):
+    def run_experiment(self):
         start = perf_counter()
         self.load_documents()
-        self.preprocess_documents(splitter_type=splitter)
-        self.embed_documents()
-        preprocessed_time = perf_counter() - start
-        result = self.query_documents(query)
-        retrieval_time = perf_counter() - start - preprocessed_time
-        print("ok")
-        with open(output_file, "w") as file:
-            file.write(result + "\n\n" + f"Langchain took: {retrieval_time} seconds")
-        return result
+        self.preprocess_documents()
+
+        for question in questions:
+            answer = self.query_documents(question, 8)
+            filename = f"Q_{self.splitter_name}_output.txt"
+            with open(filename, 'a') as f:
+                f.write(f"Question: {question}\nAnswer: {answer}\n\n")
+
+        end = perf_counter()
+        print(f"Experiment with {self.splitter_name} completed in {end - start:.2f} seconds")
 
 
 if __name__ == "__main__":
-    test = SplittingTest()
-    question = "Return meaningful information from the documents provided."
-    opfile = "mainoutput.txt"
-    splitters = ["recursive", "semantic"]
-    splitter = splitters[0]
-    test.run_experiment(query=question, output_file=opfile, splitter=splitter)
-    questions = [
-        "What are the Chemicals present in Vitrified Bonded STICK?",
-        "What are the hazards associated with 341D Belts?",
-        "What is the recommended action if the Ammonium Hydroxide is swallowed?",
-        "What storage condition is recommended for this X?",
-        "What first aid measure should be taken in case of skin contact with Havaklean KP?",
-        "What type of eye protection is recommended when handling Copper Sulphate?",
-        "What type of extinguishing media is suitable for a fire involving Citrisurf?",
-        "What should be done to prevent from causing environmental contamination in the event of a spill?",
-        "Is Vitrified Bonded WHEEL listed under the TSCA inventory?",
-        "What is the UN number assigned to Argon Liquid for transport purposes?"
-    ]
-    for i, q in enumerate(questions):
-        filename = f"{splitter}/Q{i}_{splitter}_brkpt_{test.brkpt}_output.txt"
-        with open(filename, 'w') as f:
-            f.write(test.query_documents(q, 8))
+    splitters = ["recursive", "semantic", "section_aware", "none"]
 
-    print("test concluded.")
+    for splitter in splitters:
+        test = SplittingTest(splitter)
+        test.run_experiment()
+
+    print("All tests concluded.")
