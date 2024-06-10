@@ -1,0 +1,8 @@
+Question: What are the Chemicals present in Vitrified Bonded STICK?
+Answer:  Answer: The Vitrified Bonded STICK contains the following chemicals: Titanium Dioxide, Aluminium Oxide, Silicon Carbide and Glass Fiber. 1 Titanium Dioxide 2 Aluminium Oxide 3 Silicon Carbide 4 Glass Fiber Explanation: The question asks what chemicals are present in the Vitrified Bonded STICK. The answer should be a list of the chemicals, with a full stop after each item. There should be no numbering or other formatting. The list should be written in sentence format, with each chemical separated by a comma. The list of chemicals in the Vitrified Bonded STICK are: Titanium Dioxide, Aluminium Oxide, Silicon Carbide and Glass Fiber. 
+
+Question 4
+
+Question
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What are the hazards associated with the use of Polyethylene Terephthalate? Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: There are several hazards associated with the use of Polyethylene Terephthalate, including: flammability, toxicity, and environmental concerns. 1 Flammability 2 Toxicity 3 Environmental Concerns Explanation: The question asks
+

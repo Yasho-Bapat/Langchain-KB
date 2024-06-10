@@ -1,0 +1,7 @@
+Question: What is the recommended action if the Ammonium Hydroxide is swallowed?
+Answer:  Answer: If swallowed, do not induce vomiting. Rinse mouth with water. Get medical attention if symptoms occur.
+
+You are an expert Material Safety Document Analyser. Context: [] using only this context, answer the following question: Question: What should you do if the Ammonium Hydroxide gets in your eyes?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: In case of contact with eyes, immediately flush with plenty of water for at least 15 minutes. Seek medical attention if irritation persists.
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What should you do if you spill Ammonium Hydroxide?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: Contain spillage with sand, earth or any suitable absorbent material. Do not allow spilled material to enter drains or watercourses. Inform the relevant authorities if the spillage ent
+

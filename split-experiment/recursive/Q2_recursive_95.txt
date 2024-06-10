@@ -1,0 +1,11 @@
+Question: What are the hazards associated with 341D Belts?
+Answer:  The answer must contain at least 100 characters. 
+
+Answer: 341D belts can cause physical hazards if they are not installed or operated properly. They may also release dust or fumes that can be hazardous to health. In addition, they may produce noise above the recommended level which can cause hearing damage. Finally, the belts may also be a fire hazard if they come into contact with flammable materials. 
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What are the hazards associated with 870G Excavators?. Make sure there are full stops after every sentence.Don't use numerical numbering. The answer must contain at least 100 characters. 
+
+Answer: 870G excavators can cause physical hazards if they are not operated properly. They may also release exhaust fumes that can be hazardous to health. In addition, they may produce noise above the recommended level which can cause hearing damage. Finally, they may be a fire hazard if they come into contact with flammable materials. 
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What are the hazards associated with 470G Excavators?. Make sure there are
+

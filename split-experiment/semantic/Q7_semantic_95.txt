@@ -1,0 +1,8 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:  Use full words.
+
+Rubber and plastic are flammable materials, and Citrisurf is a flammable liquid, therefore a fire can be started by these materials. In case of a fire involving Citrisurf, a fire extinguisher would be required in order to put out the flames. This extinguisher should have a Class B rating, as it is suitable for flammable liquid fires. It is also important that the extinguishing media be non-conductive, as Citrisurf is often used in electrical equipment. Carbon dioxide, foam, and dry chemical extinguishers are all suitable for use on a Class B fire, so any of these could be used to extinguish a fire involving Citrisurf. In order to select the best extinguishing media, it is important to consider the specific circumstances of the fire, such as the size of the fire, the location of the fire, and the resources available to put it out. Ultimately, the decision of which extinguishing media to use should be left to a trained professional. 
+```
+### 3.2.3.2 Example 2: Step-by-step Guide
+1. First, identify the type of fire that is being asked about. In this case, we are dealing with a fire involving Citrisurf
+

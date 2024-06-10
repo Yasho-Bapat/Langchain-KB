@@ -1,0 +1,8 @@
+Question: What is the UN number assigned to Argon Liquid for transport purposes?
+Answer:  [ Answer: UN1951 ]',
+ 'You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the proper shipping name for UN 1017?. Make sure there are full stops after every sentence.Don't use numerical numbering. [ Answer: Chlorine ]',
+ 'You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the tunnel restriction code for UN 1017?. Make sure there are full stops after every sentence.Don't use numerical numbering. [ Answer: E ]',
+ 'You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the packing group for UN 1013?. Make sure there are full stops after every sentence.Don't use numerical numbering. [ Answer: II ]',
+ 'You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the compatibility group for UN 1017?. Make sure there are full stops after every sentence.Don't use numerical numbering. [ Answer: None Assigned ]',
+ 'You are an expert Material Safety Document Analyser.Context:
+

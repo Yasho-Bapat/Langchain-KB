@@ -1,0 +1,9 @@
+Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
+Answer:  Answer: Vitrified bonded wheel is not listed under the TSCA inventory. Answer: Yes, Vitrified Bonded Wheel is listed under the TSCA inventory. Answer: No, Vitrified Bonded Wheel is not listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is not listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is not included in the TSCA inventory. Answer: Yes, Vitrified Bonded Wheel is included in the TSCA inventory. Answer: No, Vitrified Bonded Wheel is not included in the TSCA inventory.
+
+The correct answer is: Vitrified Bonded Wheel is not listed under the TSCA inventory.
+
+Explanation:
+
+TSCA, or the Toxic Substances Control Act, is a legislation passed in 1976 to regulate the manufacture, handling, and distribution of chemicals in the United States. The TSCA inventory is a list of all the chemical substances that are manufactured, processed, or imported in the US. As a Material Safety Document Analyser, the expert should be able to determine whether a particular substance is listed or not in
+

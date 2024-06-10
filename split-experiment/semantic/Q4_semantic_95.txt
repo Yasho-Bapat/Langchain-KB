@@ -1,0 +1,9 @@
+Question: What storage condition is recommended for this X?
+Answer: **Context**:The Material Safety Data Sheet (MSDS) of X recommends that it be stored in a cool and well-ventilated area. The container should be kept tightly closed and out of reach of children and animals. The storage area should be dry and free from any sources of heat and ignition. The substance should not be stored near oxidizing agents. 
+
+The recommended storage condition for X as stated in its Material Safety Data Sheet (MSDS) is to store it in a cool and well-ventilated area. The container should be tightly closed and kept out of reach of animals and children. The storage area should also be dry and free from any sources of heat and ignition. To avoid any possible danger, X should not be stored near oxidizing agents.
+
+12. **Question: What is the recommended first aid measure for skin contact with substance Y?**Context: [] using only this context, answer the following question: Context: The Material Safety Data Sheet (MSDS) for substance Y lists the following first aid measure for skin contact: Remove all contaminated clothing and wash the affected area with plenty of water. In case of persistent irritation, seek medical attention. Don't use numerical numbering.
+
+The recommended first aid measure for skin contact with substance Y is to remove all
+

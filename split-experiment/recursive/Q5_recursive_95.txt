@@ -1,0 +1,9 @@
+Question: What first aid measure should be taken in case of skin contact with Havaklean KP?
+Answer:  Answer: If skin contact with Havaklean KP, immediately remove all contaminated clothing, shoes and leather goods and flush the affected area with plenty of water for at least 15-20 minutes. Seek medical attention if irritation or other symptoms persist or occur later.
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What type of respiratory protection should be used during use of Havaklean KP?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: Use respiratory protection if ventilation is insufficient to control airborne dust. Respirators of the type NIOSH/MSHA approved for dust are recommended.
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What type of fire protection equipment should be available during the use of Havaklean KP?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: Keep fire protection equipment near work areas. Fire extinguishing materials should be appropriate to the surrounding fire.
+
+You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the recommended storage temperature of Havaklean KP?. Make
+
