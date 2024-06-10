@@ -1,9 +1,10 @@
 from time import perf_counter
 import dotenv
 
+import chromadb
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
-from langchain.retrievers import AzureAISearchRetriever
+#from langchain.retrievers import AzureAISearchRetriever
 from langchain_openai import AzureOpenAI
 
 from langchain_community.document_loaders import PyPDFLoader
@@ -48,10 +49,17 @@ class Splitters:
 class SplittingTest:
     def __init__(self):
         self.docs_dir = "../docs"
-        self.endpoint = os.getenv("ENDPOINT")
-        self.embedding_function = AzureOpenAIEmbeddings()
+        self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        self.embedding_function = AzureOpenAIEmbeddings(deployment="langchain-splitting-test1")
         self.llm = AzureOpenAI(model="gpt-4o")
+        persistent_client = chromadb.PersistentClient(path="../chroma_db/langchain")
+        self.db = Chroma(
+                        client=persistent_client,
+                        collection_name="langchain",
+                        embedding_function=self.embedding_function,
+                    )
         self.documents = []
+        self.split_docs = []
 
     def load_documents(self):
         file_paths = [
@@ -66,19 +74,20 @@ class SplittingTest:
             self.documents.extend(documents)
 
     def preprocess_documents(self, splitter_type):
+        print(splitter_type)
         if splitter_type == "recursive":
             text_splitter = RecursiveCharacterTextSplitter(
                 chunk_size=200, chunk_overlap=50, separators=[" ", "\n", "\t"]
             )
-            self.docs = text_splitter.split_documents(self.documents)  # Split documents
+            self.split_docs = text_splitter.split_documents(self.documents)  # Split documents
         elif splitter_type == "semantic":
-            semantic_splitter = SemanticChunker(AzureOpenAIEmbeddings(deployment="langchain-kb-embedding-test1"))
-            self.docs = semantic_splitter.split_documents(self.documents)
-            print(self.docs)
-            print(f"{len(self.docs)} splits created.")
+            semantic_splitter = SemanticChunker(self.embedding_function)
+            self.split_docs = semantic_splitter.split_documents(self.documents)
+            print(self.split_docs)
+            print(f"{len(self.split_docs)} splits created.")
 
     def embed_documents(self):
-        self.db = Chroma.from_documents(self.docs, self.embedding_function)
+        self.db = Chroma.from_documents(self.split_docs, self.embedding_function)
 
     def query_documents(self, query, k=10):
         docs = self.db.similarity_search(query, k)  # Retrieve top-k similar documents
@@ -104,3 +113,30 @@ class SplittingTest:
         with open(output_file, "w") as file:
             file.write(result + "\n\n" + f"Langchain took: {retrieval_time} seconds")
         return result
+
+
+if __name__ == "__main__":
+    test = SplittingTest()
+    question = "Return meaningful information from the documents provided."
+    opfile = "mainoutput.txt"
+    splitters = ["recursive", "semantic"]
+    splitter = splitters[1]
+    test.run_experiment(query=question, output_file=opfile, splitter=splitter)
+    questions = [
+        "What are the Chemicals present in Vitrified Bonded STICK?",
+        "What are the hazards associated with 341D Belts?",
+        "What is the recommended action if the Ammonium Hydroxide is swallowed?",
+        "What storage condition is recommended for this X?",
+        "What first aid measure should be taken in case of skin contact with Havaklean KP?",
+        "What type of eye protection is recommended when handling Copper Sulphate?",
+        "What type of extinguishing media is suitable for a fire involving Citrisurf?",
+        "What should be done to prevent from causing environmental contamination in the event of a spill?",
+        "Is Vitrified Bonded WHEEL listed under the TSCA inventory?",
+        "What is the UN number assigned to Argon Liquid for transport purposes?"
+    ]
+    for i, q in enumerate(questions):
+        filename = f"Q{i}_{splitter}_output.txt"
+        with open(filename, 'w') as f:
+            f.write(test.query_documents(q, 8))
+
+    print("test concluded.")
