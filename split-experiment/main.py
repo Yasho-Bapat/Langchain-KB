@@ -1,4 +1,4 @@
-import re
+import json
 from time import perf_counter
 import dotenv
 import os
@@ -82,16 +82,26 @@ class SplittingTest:
         else:
             pass
 
+        # storing splits as json result
+        filename = f"splits/{self.splitter_name}"
+        results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
+        with open(f"{filename}.json", "w") as f:
+            json.dump(results, f, indent=2)
+
+        print(f"preprocessing finished. {len(self.split_docs)} splits created, stored in {filename}.json")
+
     def store_documents(self):
         self.db.add_documents(self.split_docs)
+        print("document stored!")
 
     def query_documents(self, query, k=10):
+        print(f"query: {query}")
         docs = self.db.similarity_search(query, k)
 
         # code will change for Azure AI llm
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
-            + "analyse Material Safety and regulation documents."
+            + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES."
             + f"Context: {[doc.page_content for doc in docs]} "
             + "USING ONLY THIS CONTEXT, answer the following question: "
             + f"Question: {query}. Make sure there are full stops after every sentence."
@@ -111,7 +121,7 @@ class SplittingTest:
                 filename = f"{self.splitter_name}/Q{i + 1}_{self.splitter_name}_{self.brkpt}.txt"
             else:
                 filename = f"{self.splitter_name}/Q{i+1}_{self.splitter_name}.txt"
-            with open(filename, 'w') as f:
+            with open(filename, 'w', encoding="utf-8") as f:
                 f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
         self.db.drop_tables()
@@ -121,15 +131,15 @@ class SplittingTest:
 
 
 if __name__ == "__main__":
-    splitters = ["recursive"]
-    # splitters = ["semantic"]
+    # splitters = ["recursive"]
+    #splitters = ["semantic"]
     # splitters = ["section_aware"]
-    # splitters = ["recursive", "semantic", "section_aware"]
+    splitters = ["recursive", "semantic", "section_aware"]
 
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
         "What are the hazards associated with 341D Belts?",
-        "What is the recommended action if the Ammonium Hydroxide is swallowed?",
+        #"What is the recommended action if the Ammonium Hydroxide is swallowed?",
         "What storage condition is recommended for this Copper Sulphate?",
         "What first aid measure should be taken in case of skin contact with Havaklean KP?",
         "What type of eye protection is recommended when handling Copper Sulphate?",
