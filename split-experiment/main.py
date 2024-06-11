@@ -12,7 +12,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 dotenv.load_dotenv()
 
-connection = "postgresql+psycopg://langchain:langchain@139.59.66.122:6024/langchain"
+connection = os.getenv("DATABASE_URL")
 collection_name = "my_docs"
 embeddings = AzureOpenAIEmbeddings()
 
