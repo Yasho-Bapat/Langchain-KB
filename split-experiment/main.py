@@ -14,7 +14,6 @@ dotenv.load_dotenv()
 
 connection = os.getenv("DATABASE_URL")
 collection_name = "my_docs"
-embeddings = AzureOpenAIEmbeddings()
 
 
 class SplittingTest:
@@ -26,7 +25,7 @@ class SplittingTest:
         self.splitter_name = splitter_name
 
         self.db = PGVector(
-            embeddings=embeddings,
+            embeddings=self.embedding_function,
             collection_name=collection_name,
             connection=connection,
             use_jsonb=True,
@@ -106,7 +105,10 @@ class SplittingTest:
 
         for i, question in enumerate(questions):
             answer = self.query_documents(question, 8)
-            filename = f"{self.splitter_name}/Q{i+1}_{self.splitter_name}_{self.brkpt}.txt"
+            if self.splitter_name == "semantic":
+                filename = f"{self.splitter_name}/Q{i + 1}_{self.splitter_name}_{self.brkpt}.txt"
+            else:
+                filename = f"{self.splitter_name}/Q{i+1}_{self.splitter_name}.txt"
             with open(filename, 'w') as f:
                 f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
@@ -117,8 +119,8 @@ class SplittingTest:
 if __name__ == "__main__":
     # splitters = ["section_aware"]
     # splitters = ["recursive"]
-    splitters = ["semantic"]
-    # splitters = ["recursive", "semantic", "section_aware"]
+    # splitters = ["semantic"]
+    splitters = ["recursive", "semantic", "section_aware"]
 
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
