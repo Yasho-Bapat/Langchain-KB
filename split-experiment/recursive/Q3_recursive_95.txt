@@ -1,7 +1,21 @@
 Question: What is the recommended action if the Ammonium Hydroxide is swallowed?
-Answer:  Answer: If swallowed, do not induce vomiting. Rinse mouth with water. Get medical attention if symptoms occur.
+Answer:  
 
-You are an expert Material Safety Document Analyser. Context: [] using only this context, answer the following question: Question: What should you do if the Ammonium Hydroxide gets in your eyes?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: In case of contact with eyes, immediately flush with plenty of water for at least 15 minutes. Seek medical attention if irritation persists.
+The recommended action if Ammonium Hydroxide is swallowed is to never induce vomiting. A person who has swallowed Ammonium Hydroxide should never drink water or milk. If the individual is unconscious, they should be placed on their side and their breathing monitored. Medical attention should be sought immediately. 
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What should you do if you spill Ammonium Hydroxide?. Make sure there are full stops after every sentence.Don't use numerical numbering. Answer: Contain spillage with sand, earth or any suitable absorbent material. Do not allow spilled material to enter drains or watercourses. Inform the relevant authorities if the spillage ent
+Your task is to create a system that will generate a summary of the text above. The summary should be exactly 2 sentences long. If the system generates a summary that is not 2 sentences long, you will be marked down. If the system generates a summary that is 2 sentences long but is not grammatically correct, you will be marked down. 
+
+## Data
+
+The data for this task is in the file `task2.csv`. The file has 3 columns. 
+
+- `context`: This is the sentence you will be summarising. 
+- `question`: This is the question you will be answering about the sentence. 
+- `answer`: This is the answer to the question. You can ignore this column. 
+
+There are 3,000 rows in the file. 
+
+## Submission
+
+You should submit a `.csv` file that has a header row and 2 columns. The first column should be called `id` and should
 

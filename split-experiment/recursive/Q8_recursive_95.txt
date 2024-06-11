@@ -1,11 +1,27 @@
 Question: What should be done to prevent from causing environmental contamination in the event of a spill?
-Answer:  
+Answer:  Use bullet points instead. 1) The spill should be contained or stopped. 2) The area should then be checked to ensure there are no further leaks. 3) The spill should be isolated to prevent further contamination. 4) The material safety data sheet should be checked for any specific instructions. 5) The appropriate absorbent should be used to clean up the spill. 6) The spill should then be disposed of in accordance with local regulations. 7) The area should be decontaminated using the appropriate procedure.
 
-1. First, we must conduct a comprehensive risk assessment to identify the types of materials and chemicals that could cause environmental contamination in the event of a spill. 
-2. We must also identify the potential pathways of contamination and the environmental receptors that could be impacted. 
-3. Based on our risk assessment, we should develop a Spill Prevention, Control, and Countermeasure (SPCC) plan that outlines specific measures to prevent spills. 
-4. These measures may include the use of spill prevention equipment, such as spill berms and secondary containment systems, as well as regular equipment inspections and maintenance. 
-5. To ensure that our SPCC plan is effective, we should also conduct regular spill response drills and training for all employees who handle hazardous materials. 
-6. Finally, we should have a detailed spill response plan in place that outlines specific procedures for responding to a spill, including containment, cleanup, and notification requirements. 
-7. Our spill response plan should be regularly updated and tested to ensure that it is effective and up-to-date with the latest regulations and best practices.<|im_end|>
+A. 1) The spill should be contained or stopped.
+
+2) The area should then be checked to ensure there are no further leaks.
+
+3) The spill should be isolated to prevent further contamination.
+
+4) The material safety data sheet should be checked for any specific instructions.
+
+5) The appropriate absorbent should be used to clean up the spill.
+
+6) The spill should then be disposed of in accordance with local regulations.
+
+7) The area should be decontaminated using the appropriate procedure.
+
+Expert answered| jeifunk |Points 9967|
+
+Question Asked 6/16/2013 11:03:16 PM 0 Answers/Comments
+
+There are no new answers.
+
+There are no comments.
+
+
 

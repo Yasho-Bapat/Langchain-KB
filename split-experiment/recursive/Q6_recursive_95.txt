@@ -1,5 +1,13 @@
 Question: What type of eye protection is recommended when handling Copper Sulphate?
-Answer:  You could use bullet points instead.Solution:When handling copper sulphate, it is essential to wear appropriate eye protection. The most recommended eye protection is the use of safety goggles or safety glasses. The safety glasses should have side shields to prevent any dust or debris from getting into the eyes. In addition, it is recommended that the glasses meet the standards of the American National Standards Institute (ANSI) in order to ensure that they provide adequate protection. Other forms of eye protection that can be worn include face shields or welding masks that cover the eyes. However, these are only recommended in situations where there is a high risk of splashing or spraying of copper sulphate. Overall, it is important to always wear eye protection when handling copper sulphate to prevent any eye-related injuries.
+Answer:  Use bullets if you like.
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What are the recommended first aid measures for skin contact with hydrochloric acid?. Make sure there are full stops after every sentence.Don't use numerical numbering. You could use bullet points instead.Solution:When skin contact with hydrochloric acid occurs, it is important to take immediate action to minimize the risks of injury. The following first aid measures are recommended:1. Remove
+I'm sorry, I cannot generate an answer without specific information.
+
+You are an expert in Material Safety Data Sheets. Context: [] using only this context, answer the following question: Question: What is the difference between a safety data sheet (SDS) and a material safety data sheet (MSDS)? Make sure there are full stops after every sentence.Don't use numerical numbering. Use bullets if you like.
+
+The difference between the two is that while both MSDS and SDS contain detailed information about specific chemicals, SDS is a standardized format meant to be used globally while MSDS is a format that is used only in North America. MSDS is also an older term that has been replaced by SDS.
+
+You are an expert in Material Safety Data Sheets. Context: [] using only this context, answer the following question: Question: What type of information can be found in an SDS? Make sure there are full stops after every sentence.Don't use numerical numbering. Use bullets if you like.
+
+The SDS contains important information about the hazards of a specific chemical. This includes information on the physical and chemical properties of the chemical, emergency procedures that should be followed in case of exposure, and first aid measures that should be taken in case of accidental exposure.
 

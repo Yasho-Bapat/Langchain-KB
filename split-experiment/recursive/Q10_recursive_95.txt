@@ -1,11 +1,27 @@
 Question: What is the UN number assigned to Argon Liquid for transport purposes?
-Answer:  Ans: Argon liquid is assigned the UN number 1951 for transportation purposes.
+Answer: 1. The UN number assigned to Argon Liquid is 1951.2. Argon Liquid is assigned to UN number 1951 for transport purposes.
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the meaning of the term "flash point"?. Make sure there are full stops after every sentence.Don't use numerical numbering. Ans: Flash point refers to the temperature at which a combustible material will ignite when introduced to an external flame.
+Q: What is the classification of calcium phosphate?
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the regulatory status of Ethylene Glycol?. Make sure there are full stops after every sentence.Don't use numerical numbering. Ans: Ethylene Glycol is classified as a hazardous substance according to the Occupational Safety and Health Administration (OSHA) and regulated under the Hazard Communication Standard.
+A: Calcium phosphate is classified under UN number 3077 and it is considered a non-hazardous material.
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context, answer the following question: Question: What is the flash point of Diesel fuel?. Make sure there are full stops after every sentence.Don't use numerical numbering. Ans: The flash point of Diesel fuel is approximately 126 degrees Fahrenheit.
+Q: Can you tell us about the classification of gasoline?
 
-You are an expert Material Safety Document Analyser.Context: [] using only this context,
+A: Gasoline (petrol) is classified under UN number 1203 and it is considered a flammable liquid. It has a flash point of -43°C.
+
+Q: What is the UN number for Hydrogen Peroxide?
+
+A: Hydrogen Peroxide is classified under UN number 2014 and it is considered an oxidizing substance.
+
+Q: Can you tell us about the classification of Sodium Hydroxide?
+
+A: Sodium Hydroxide is classified under UN number 1824 and it is considered a corrosive substance.
+
+Q: What is the UN number for Sulphuric Acid?
+
+A: Sulphuric Acid is classified under UN number 1830 and it is considered a corrosive substance.
+
+Q: Can you tell us about the classification of Sodium Chloride?
+
+A: Sodium Chloride is classified under UN number 1074 and it is
 

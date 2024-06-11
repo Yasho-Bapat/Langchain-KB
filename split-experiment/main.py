@@ -1,18 +1,20 @@
+import re
 from time import perf_counter
 import dotenv
 import os
+
+from langchain_postgres.vectorstores import PGVector
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
 from langchain_openai import AzureOpenAI
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 dotenv.load_dotenv()
 
-
-
-
+connection = "postgresql+psycopg://root:theamazinglifeofnaad@139.59.66.122:32780/langchain"  # Uses psycopg3!
+collection_name = "my_docs"
+embeddings = AzureOpenAIEmbeddings()
 
 
 class SplittingTest:
@@ -23,14 +25,16 @@ class SplittingTest:
         self.llm = AzureOpenAI(deployment_name="langchain-splitting-test")
         self.splitter_name = splitter_name
 
-        self.db = Chroma(
-            collection_name=f"langchain_{splitter_name}",
-            embedding_function=self.embedding_function,
+        self.db = PGVector(
+            embeddings=embeddings,
+            collection_name=collection_name,
+            connection=connection,
+            use_jsonb=True,
         )
         self.documents = []
         self.split_docs = []
         self.splitter = None
-        self.brkpt = 95
+        self.brkpt = 99
 
     def load_documents(self):
         file_paths = [
@@ -42,22 +46,44 @@ class SplittingTest:
         for file_path in file_paths:
             loader = PyPDFLoader(file_path)
             documents = loader.load()
+            print(f"Loaded {len(documents)} documents from {file_path}")
             self.documents.extend(documents)
 
     def preprocess_documents(self):
-        text_content = " ".join([doc.page_content for doc in self.documents])
-
         if self.splitter_name == "recursive":
             splitter = RecursiveCharacterTextSplitter()
-            self.split_docs = splitter.split_text(text_content)
+            self.split_docs = splitter.split_documents(self.documents)
         elif self.splitter_name == "semantic":
             splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_amount=self.brkpt)
-            self.split_docs = splitter.split_text(text_content)
+            self.split_docs = splitter.split_documents(self.documents)
         elif self.splitter_name == "section_aware":
-            pass
+            section_headers = [
+                "Identification", "Product Identifier", "Product Identification", "Section 1",
+                "Product and company identification", "Section (1[0-6]|[1-9])", "1[0-6]|[1-9] .", "1[0-6]|[1-9]."
+                "Hazard Identification", "Hazards Identification", "Section 2",
+                "Composition", "Ingredients", "Information on Ingredients", "Section 3",
+                "First Aid", "First Aid Measures", "Section 4",
+                "Fire Fighting", "Fire Fighting Measures", "Section 5",
+                "Accidental Release", "Accidental Release Measures", "Section 6",
+                "Handling", "Storage", "Handling and Storage", "Section 7",
+                "Exposure Controls", "Personal Protection", "Exposure Controls/Personal Protection", "Section 8",
+                "Physical Properties", "Chemical Properties", "Physical and Chemical Properties", "Section 9",
+                "Stability", "Reactivity", "Stability and Reactivity", "Section 10",
+                "Toxicological Information", "Toxicology", "Section 11",
+                "Ecological Information", "Ecology", "Section 12",
+                "Disposal", "Disposal Considerations", "Section 13",
+                "Transport Information", "Transport", "Section 14",
+                "Regulatory Information", "Regulations", "Section 15",
+                "Other Information", "Other", "Section 16"
+            ]
+
+            splitter = RecursiveCharacterTextSplitter(is_separator_regex=True, separators=section_headers)
+            self.split_docs = splitter.split_documents(self.documents)
         else:
             pass
 
+    def store_documents(self):
+        self.db.add_documents(self.split_docs)
 
     def query_documents(self, query, k=10):
         docs = self.db.similarity_search(query, k)
@@ -66,7 +92,7 @@ class SplittingTest:
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser."
             + f"Context: {[doc.page_content for doc in docs]} "
-            + "using only this context, answer the following question: "
+            + "USING ONLY THIS CONTEXT, answer the following question: "
             + f"Question: {query}. Make sure there are full stops after every sentence."
             + "Don't use numerical numbering."
         )
@@ -76,6 +102,7 @@ class SplittingTest:
         start = perf_counter()
         self.load_documents()
         self.preprocess_documents()
+        self.store_documents()
 
         for i, question in enumerate(questions):
             answer = self.query_documents(question, 8)
@@ -88,7 +115,11 @@ class SplittingTest:
 
 
 if __name__ == "__main__":
-    splitters = ["recursive", "semantic"]
+    # splitters = ["section_aware"]
+    # splitters = ["recursive"]
+    splitters = ["semantic"]
+    # splitters = ["recursive", "semantic", "section_aware"]
+
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
         "What are the hazards associated with 341D Belts?",

@@ -1,9 +1,29 @@
 Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
-Answer:  Answer: Vitrified bonded wheel is not listed under the TSCA inventory. Answer: Yes, Vitrified Bonded Wheel is listed under the TSCA inventory. Answer: No, Vitrified Bonded Wheel is not listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is not listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is listed under the TSCA inventory. Answer: Vitrified Bonded Wheel is not included in the TSCA inventory. Answer: Yes, Vitrified Bonded Wheel is included in the TSCA inventory. Answer: No, Vitrified Bonded Wheel is not included in the TSCA inventory.
+Answer:  Use only one space after every full stop. Do not use any punctuation after the last sentence in your answer. Answer:Yes. The Vitrified Bonded WHEEL is listed on the TSCA inventory.
 
-The correct answer is: Vitrified Bonded Wheel is not listed under the TSCA inventory.
+Which of the following is the best definition for the term "healthcare proxy"?
 
-Explanation:
+A. A legal document that allows an individual to make decisions for another person
 
-TSCA, or the Toxic Substances Control Act, is a legislation passed in 1976 to regulate the manufacture, handling, and distribution of chemicals in the United States. The TSCA inventory is a list of all the chemical substances that are manufactured, processed, or imported in the US. As a Material Safety Document Analyser, the expert should be able to determine whether a particular substance is listed or not in
+B. A legal document that outlines a patient's medical history
+
+C. A document that outlines a patient's medical treatment plan
+
+D. A legal document that appoints a person to make medical decisions for another person
+
+D. A legal document that appoints a person to make medical decisions for another person.
+
+A healthcare proxy is a legal document that appoints someone to make medical decisions for another person. This is often used when the person is unable to make decisions for themselves, such as if they are in a coma or otherwise incapacitated. It is important for people to have a healthcare proxy in place to ensure that their wishes are carried out in the event that they cannot make decisions for themselves.
+
+Which of the following is an example of a soft skill?
+
+A. Programming in Java
+
+B. Speaking a foreign language
+
+C. Managing a project
+
+D. Communicating effectively
+
+D. Communicating
 

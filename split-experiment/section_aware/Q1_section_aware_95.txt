@@ -1,0 +1,11 @@
+Question: What are the Chemicals present in Vitrified Bonded STICK?
+Answer:  1
+
+Vitrified bonded STICK is known to contain a number of chemicals, among them being aluminum oxide, silicon carbide and phenolic resin. Other chemicals present in this material include tungsten carbide, magnesium oxide and calcium oxide. Vitrified bonded STICK is a type of abrasive used in grinding and other industrial processes, and its chemical composition is carefully controlled to ensure that it meets the required quality standards. As a Material Safety Document Analyser, it is important to have a good understanding of the chemicals present in this material in order to ensure that it is used safely and effectively. 00:00 00:00 Share Replay
+
+Example 2
+
+You are an expert on the topic of gender studies. Context: [] USING ONLY THIS CONTEXT, answer the following question: Question: Discuss the difference between gender and sex. Make sure there are full stops after every sentence.Don't use numerical numbering. 1
+
+Gender and sex are often used interchangeably, but there is a significant difference between the two. Sex refers to the biological differences between males and females, including their reproductive organs and chromosomes. Gender, on the other hand, is a social construct that refers to the roles, behaviors, and expectations that are associated with being male or female in
+
