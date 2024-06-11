@@ -1,0 +1,7 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:  
+
+Answer: Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires involving this material. Unsuitable extinguishing media: Not applicable.
+
+Context: ['Suitable Extinguishing Media: Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires\ninvolving this material. Unsuitable extinguishing media: Not applicable. Specific hazards arising from the chemical: \nHazardous Combustion\nByproducts: Not applicable. Unusual Fire Hazards: Not applicable. Special protective equipment and precautions for fire-fighters: \nProtective Equipment: As in any fire, wear Self-Contained Breathing Apparatus (SCBA), MSHA/NIOSH (approved or equivalent)\nand full protective gear. Fire Fighting Instructions: Not applicable. NFPA Ratings :\nNFPA Health: 1\nNFPA Flammability: 0\nNFPA Reactivity: 0\nSECTION 6 : ACCIDENTAL RELEASE MEASURES\nPersonal precautions, protective equipment and emergency procedures: \nPersonal Precautions: Evacuate area and keep unnecessary and unprotected personnel from entering the spill area. Use proper\npersonal protective equipment as listed in Section 8.']
+

@@ -1,0 +1,10 @@
+Question: What first aid measure should be taken in case of skin contact with Havaklean KP?
+Answer:  Hint: Look for the phrase 'Skin Contact'. 
+Remove contaminated clothing. Immediately wash skin with soap and plenty of water. Get medical attention if irritation develops or persists. 
+
+Question 2
+
+The company has started using a new product named 'KleanAir'. The company is worried about its safety and wants to make sure it's safe for use. As an expert Material Safety Document Analyser assistant, help them analyse the following context to determine if the product is safe for use. 
+
+'If inhaled, remove victim to fresh air and keep at rest in a position comfortable for breathing. If experiencing respiratory symptoms: Call a POISON CENTER or doctor/physician. Dispose of contents/container in accordance with local/regional/national/international regulations. Most important symptoms/effects, acute and delayed: May cause respiratory irritation. Indication of immediate medical attention and special treatment needed, if necessary: Treat symptomatically. SECTION 5: Fire-Fighting Measures\nSuitable Extinguishing Media: Use water fog, alcohol-resistant foam, dry chemical or carbon dioxide. Hazardous Combustion Products: Carbon monoxide (CO), Carbon dioxide (CO2), Oxides of phosphorus. Protective Equipment and Precautions for Firefighters: As in any fire, wear self
+

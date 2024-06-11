@@ -1,7 +1,0 @@
- Use alphabets instead. Example answer: a) chemical1. b) chemical2.
-
-Answer: 
-a) Aluminum Oxide 
-b) Amorphous Silica, Fused
-
-You are an expert Material Safety Document Analyser.Context: ['Product Name: Vitrified Bench / Pedestal Grinding Wheels  \nRevision Date: 06/11/2012 \nMSDS Number: 35047-02/Gen_US/EN\nSECTION 1. PRODUCT AND COMPANY IDENTIFICATION\nProduct name: Vitrified Bench / Pedestal Grinding Wheels  \nProduct Use: Abrasive materials used for sanding metals, concrete, masonry, and building materials.\nManufacturer / Supplier: Saint-Gobain Abrasives, Inc.\nOne New Bond Street\nWorcester, MA 01606\nTelephone: 508-795-5000\nFax: 508-795-5120\nWeb address: http://www.nortonabrasives.com\nEmergency Phone No.: CHEMTREC 1-800-424-9300\nSECTION 2. COMPOSITION/INFORMATION ON INGREDIENTS\nChemical Name: Zirconium Aluminum Oxide\nCAS No.: 1344-28-1

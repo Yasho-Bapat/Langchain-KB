@@ -9,15 +9,16 @@ from langchain_openai.embeddings import AzureOpenAIEmbeddings
 from langchain_openai import AzureOpenAI
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.messages import SystemMessage
+
 
 dotenv.load_dotenv()
-
-connection = os.getenv("DATABASE_URL")
-collection_name = "my_docs"
 
 
 class SplittingTest:
     def __init__(self, splitter_name):
+        self.connection = os.getenv("DATABASE_URL")
+        self.collection_name = "my_docs"
         self.docs_dir = "../docs"
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         self.embedding_function = AzureOpenAIEmbeddings(deployment="langchain-splitting-test1")
@@ -26,14 +27,14 @@ class SplittingTest:
 
         self.db = PGVector(
             embeddings=self.embedding_function,
-            collection_name=collection_name,
-            connection=connection,
+            collection_name=self.collection_name,
+            connection=self.connection,
             use_jsonb=True,
         )
         self.documents = []
         self.split_docs = []
         self.splitter = None
-        self.brkpt = 99
+        self.brkpt = 95
 
     def load_documents(self):
         file_paths = [
@@ -89,7 +90,8 @@ class SplittingTest:
 
         # code will change for Azure AI llm
         result = self.llm.invoke(
-            f"You are an expert Material Safety Document Analyser."
+            f"You are an expert Material Safety Document Analyser assistant that helps people"
+            + "analyse Material Safety and regulation documents."
             + f"Context: {[doc.page_content for doc in docs]} "
             + "USING ONLY THIS CONTEXT, answer the following question: "
             + f"Question: {query}. Make sure there are full stops after every sentence."
@@ -112,21 +114,23 @@ class SplittingTest:
             with open(filename, 'w') as f:
                 f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
+        self.db.drop_tables()
+
         end = perf_counter()
         print(f"Experiment with {self.splitter_name} completed in {end - start:.2f} seconds")
 
 
 if __name__ == "__main__":
-    # splitters = ["section_aware"]
-    # splitters = ["recursive"]
+    splitters = ["recursive"]
     # splitters = ["semantic"]
-    splitters = ["recursive", "semantic", "section_aware"]
+    # splitters = ["section_aware"]
+    # splitters = ["recursive", "semantic", "section_aware"]
 
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
         "What are the hazards associated with 341D Belts?",
         "What is the recommended action if the Ammonium Hydroxide is swallowed?",
-        "What storage condition is recommended for this X?",
+        "What storage condition is recommended for this Copper Sulphate?",
         "What first aid measure should be taken in case of skin contact with Havaklean KP?",
         "What type of eye protection is recommended when handling Copper Sulphate?",
         "What type of extinguishing media is suitable for a fire involving Citrisurf?",
