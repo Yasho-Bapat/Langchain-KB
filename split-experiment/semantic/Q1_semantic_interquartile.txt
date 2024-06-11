@@ -1,5 +1,0 @@
-Question: What are the Chemicals present in Vitrified Bonded STICK?
-Answer:  Answer: Aluminum Oxide, Non-fibrous, Titanium dioxide. 
-
-You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['Aluminum Oxide, Non-fibrous \xa0 Listed: NJ Hazardous\nList; Substance\nNumber: 2891    \nTitanium dioxide \xa0 No Data     \nSECTION 16 : ADDITIONAL INFORMATION \nHMIS Ratings :\nHMIS Health Hazard: 1 \nHMIS Fire Hazard: 1 \nHMIS Reactivity: 0 Health Hazard    1 \nFire Hazard    1\nReactivity    0\nPersonal Protection    \nSDS Creation Date: April 21, 2018 \nSDS Revision Date: April 21, 2018 \nSDS Revision Notes: GHS Update \nSDS Format: \n \nCopyright© 1996-2018 Enviance. All Rights Reserved. Vitrified Bonded STICK 61463685545 \nRevison Date: 04/21/2018 8 of 8 ',
-

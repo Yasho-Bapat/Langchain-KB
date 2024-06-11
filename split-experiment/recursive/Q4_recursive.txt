@@ -1,8 +1,0 @@
-Question: What first aid measure should be taken in case of skin contact with Havaklean KP?
-Answer:   Answer:  IF ON SKIN (or hair): Take off immediately all contaminated clothing. Rinse skin with water. May cause serious damage to the skin. Effects may include redness, pain, skin burns. 
-
-Test case 6:
-We use a different context of a Safety Data Sheet for this test case. 
-
-context = "1. Product and Company Identification\n\nProduct Name: Acetone\nSynonyms/Generic Names: 2-Propanone, beta-ketopropane\nProduct Number: 0010\nProduct Use: Industrial, Manufacturing or Laboratory use\nManufacturer: Columbus Chemical Industries, Inc.\nN4335 Temkin Rd.\nGenoa City, WI 53128\nFor More Information Call: 1-800-424-9300 (Chemtrec)\n\n2. Hazards Identification\n\nGHS Classification:\nFlammable liquids Category 2\nSkin irritation Category 2\nSerious eye damage Category 2\nSpecific target organ toxicity (single exposure) Category 3\nAspiration hazard Category 1\nGHS Label Elements:\n\nSignal Word: Danger\nHazard Statements:\nH225 Highly flammable liquid and vapor.\nH319 Causes serious eye irritation.\nH336 May
-

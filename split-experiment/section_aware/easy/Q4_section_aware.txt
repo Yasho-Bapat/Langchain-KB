@@ -1,0 +1,27 @@
+Question: What storage condition is recommended for this Copper Sulphate?
+Answer:  
+
+Keep containers tightly closed in a dry, cool and well-ventilated place. 
+
+Correct answer: Keep containers tightly closed in a dry, cool and well-ventilated place.
+
+Question: What is the recommended personal protective equipment for handling this material? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+
+Wear personal protective equipment. Ensure adequate ventilation. Avoid dust formation. Do not get in eyes, on skin, or on clothing. Avoid ingestion and inhalation.
+
+Correct answer: Wear personal protective equipment. Ensure adequate ventilation. Avoid dust formation. Do not get in eyes, on skin, or on clothing. Avoid ingestion and inhalation.
+
+Question: What is the emergency telephone number for CHEMTREC outside of the USA? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+
+001-703-527-3887
+
+Correct answer: 001-703-527-3887
+
+Question: What is the signal word on the label? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+
+Warning
+
+Correct answer: Warning
+
+Question: What is the recommended method of cleaning up a spill? Make sure there are full stops after every sentence. Don't use numerical numbering.
+

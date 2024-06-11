@@ -1,7 +1,0 @@
-Question: What is the UN number assigned to Ethyl Alcohol for transport purposes?
-Answer:  
-
-Answer: Not regulated as hazardous material for transportation. UN proper shipping name: Not regulated as hazardous material for transportation. Transport hazard class(es): Not regulated as hazardous material for transportation. Packing group: Not regulated as hazardous material for transportation.
-
-Context: [" \nOSHA Vacated PELs:  Ethyl alcohol: 1000 ppm TWA; 1900 mg/m3 TWA Water: No OSHA \nVacated PELs are listed for this chemical. Personal Protective Equipment  \nEyes:  Wear appropriate protective eyeglasses or chemical safety goggles as described by \nOSHA's eye and face protection regul ations in 29 CFR 1910.133 or European Standard \nEN166. Skin:  Wear appropriate protective gloves to prevent skin exposure. Clothing:  Wear appropriate protective clothing to prevent skin exposure. Respirators:  A respiratory protection program that meets OSHA' s 29 CFR 1910.134 and \nANSI Z88.2 requirements or European Standard EN 149 must be followed whenever \nworkplace conditions warrant respirator use. Section 9 - Physical and Chemical Properties  \n \n \nPhysical State:  Clear liquid  \nAppearance:  colorless
-

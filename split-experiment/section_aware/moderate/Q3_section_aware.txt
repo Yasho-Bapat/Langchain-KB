@@ -1,0 +1,7 @@
+Question: Evaluate the environmental impact of Citrisurf when released in large quantities.
+Answer:   Answer: Citrisurf has no information on its ecotoxicological impact when released in large quantities. Please contact the address or phone number listed on the first page of the SDS for additional ecotoxicological information on this material and/or its components. Citrisurf has no information on its chemical fate when released in large quantities. Please contact the address or phone number listed on the first page of the SDS for additional chemical fate information on this material and/or its components. 
+
+Test case 3:
+The following context is given:
+'12/01/17 Stellar Solutions: CitriSurf 2250 Page 2 of 5\nSEC TION II - HAZAR DS IDENTIFICATION (continued)\nHazard  statements:  Warning\nH303 M ay be harmful if swallowed \nH316 C auses mild skin irritation \nH319 C auses serious eye irritation\nPreca utionary statements:\nP281 U se personal protective equipment as required.\nP301 + P312 If swallowed: Call a p oison center or doctor/physician if you feel unwell.\nP305 + P351 + P338 I f in eyes: Rinse cautiously with water for several minutes. Remove contact lenses, if present\nand easy to do
+

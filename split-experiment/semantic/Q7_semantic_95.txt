@@ -1,7 +1,0 @@
-Question: What should be done to prevent from causing environmental contamination in the event of a spill?
-Answer:  Example of a correct answer: In the event of a spill, the use of an inert absorbent material such as soil or sand is advised to contain the spill. The spill should be prevented from spreading by covering, diking or other means and adequate ventilation should be provided. The area should be cleaned up immediately but with precautions in the protective equipment section. After removal, the spill area should be flushed with soap and water to remove trace residue. Other precautions are not applicable. 
-
-In the event of a spill, the use of an inert absorbent material such as soil or sand should be used to contain the spill. The spill should be prevented from spreading by covering, diking or other means and adequate ventilation should be provided. The area should be cleaned up immediately but with precautions in the protective equipment section. After removal, the spill area should be flushed with soap and water to remove trace residue. Other precautions are not applicable. Avoid runoff into storm sewers, ditches, and waterways.
-
-Context: ['Hazards Identification\nEyes: Causes eye irritation. Skin: May cause skin irritation. Inhalation: Causes respiratory tract irritation. Ingestion: May be harmful if swallowed.\nSigns and Symptoms of Exposure: \nInhalation: May cause respiratory
-

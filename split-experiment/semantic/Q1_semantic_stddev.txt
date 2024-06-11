@@ -1,5 +1,0 @@
-Question: What are the Chemicals present in Vitrified Bonded STICK?
-Answer:  Answer: Aluminum Oxide, Non-fibrous and Titanium dioxide.. Anything else?: No. 
-
-Context: ['SECTION 1: Identification \nProduct Identifier:  \nProduct Name: Naphtha (petroleum), hydrotreated light \nProduct Number: 225511 \nBrand: Quaker \nCAS Number(s): 64742-47-8 \nRecommended Use and Restrictions on Use: Printing Ink; Coatings; Paints; Cleaning and Degreasing \nSupplier: Quaker Chemical Corporation \nAddress: P.O. Box 231, 901 E. Hector Street, Conshohocken, PA 19428 \nEmergency Telephone Number: For Chemical Emergency Spill, Leak, Fire, Exposure or Accident Call CHEMTREC Day or Night Within USA & Canada: 1-800-424-9300; Outside USA & Canada: 1-703-527-3887 (collect calls accepted) \nSECTION 2: Hazard(s) Identification \n \nGHS Classification: \nFlammable Liquids - Category 3 \nAspiration Hazard - Category 1 \nSpecific Target Organ Toxicity (Single Exposure) - Category 3 (Central Nervous System)
-

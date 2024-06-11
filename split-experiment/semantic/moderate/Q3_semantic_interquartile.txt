@@ -1,0 +1,7 @@
+Question: Evaluate the environmental impact of Citrisurf when released in large quantities.
+Answer:  
+
+Citrisurf is toxic to aquatic life and should be avoided from being released into the environment. The product is not biodegradable and has no data on the rates of the processes that could occur when spilled on land. It is likely to volatilize and biodegrade when released into water. The fate of the product in groundwater is unknown. It is not expected to adsorb to sediment or bioconcentrate in fish. When released to the atmosphere, it will photodegrade in hours to an estimated range of 4 to 6 days in less polluted areas. Rainout should be significant. 
+
+Context: ['STELLARv\nSOLUTION S ®SAFETY  DAT A SHEET\n®CITRISUR F 225012/01/17\nThis docum ent is copyr ight by S tellar Solutions and m ust not be po sted on line. SECTION I  - PROD UCT AND COM PANY IDENTIFICATION\nManufacturer: Stellar Solutions, Inc. 4511 Prime Par kway\n McHenry,  IL  60050 www.citrisurf.com\n (847)  854- 2800 stellar@citrisurf.com \nEMERGENCY TELEPHONE:
+

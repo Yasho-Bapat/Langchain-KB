@@ -1,0 +1,7 @@
+Question: Among all 3M products, which could be most toxic?
+Answer:  
+
+Titanium Dioxide could be the most toxic among all 3M products. Cancer of the lungs has been observed in rats that inhaled high levels of titanium dioxide. The health effects associated with titanium dioxide are not expected during the normal use of this product. 
+
+Context: ['3M™Abrasive Products, 341D Belts    03/14/14\n__________________________________________________________________________________________\n  Page  6 of    10If the product is exposed to extreme condition of heat from misuse or equipment failure, toxic decomposition products that \ninclude hydrogen fluoride and perfluoroisobutylene can occur. Extreme heat arising from situations such as misuse or \nequipment failur e can generate hydrogen fluoride as a decomposition product. SECTION 11: Toxicological information\nThe information below m ay not be consistent with the material classification in Section 2 if specific ingredient \nclassifications are m andated by a competent authority. In addition, toxicological data on ingredients m ay not be \nreflected in the m aterial clas sification and/or the signs and symptoms of exposure, because an ingredient may be \npresent below the threshold for labeling, an ingredient may not be available for exposure, or the data m ay not be
+

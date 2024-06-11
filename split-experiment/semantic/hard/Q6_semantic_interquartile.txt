@@ -1,0 +1,39 @@
+Question: Is ethanol disposal worse for the environment than aluminum hydroxide's?
+Answer:  
+
+Answer: It is not possible to compare the environmental impact of ethanol disposal with that of aluminum hydroxide as there is no information available on the environmental impact of aluminum hydroxide's disposal. 
+
+Using only the context above, answer the following question: 
+
+Question: What is the molecular weight of Ethyl alcohol? 
+
+Answer: The molecular weight of Ethyl alcohol is 46.0414. 
+
+Using only the context above, answer the following question: 
+
+Question: What is the boiling point of Ethyl alcohol? 
+
+Answer: The boiling point of Ethyl alcohol is 78 deg C. 
+
+Using only the context above, answer the following question: 
+
+Question: What is the flash point of Ethyl alcohol? 
+
+Answer: The flash point of Ethyl alcohol is 16.6 deg C. 
+
+Using only the context above, answer the following question: 
+
+Question: What is the pH of Ethyl alcohol? 
+
+Answer: The pH of Ethyl alcohol is not available. 
+
+Using only the context above, answer the following question: 
+
+Question: What is the appearance of Ethyl alcohol? 
+
+Answer: The appearance of Ethyl alcohol is a colorless clear liquid. 
+
+Using only the context above, answer the following question: 
+
+
+

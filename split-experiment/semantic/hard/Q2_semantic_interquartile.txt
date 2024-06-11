@@ -1,0 +1,5 @@
+Question: How do I dispose of amorphous silica and copper sulfate?
+Answer:  Answer: Dispose of amorphous silica and copper sulfate by determining whether a discarded chemical is classified as a hazardous waste. Chemical waste generators must also consult local, regional, and national hazardous waste regulations to ensure complete and accurate classification. Dispose of contents/container to an approved waste disposal plant. Dispose of any solid with normal refuse. 
+
+Context: ["Excess heat. Incompatible Materials Strong oxidizing agents\nHazardous Decomposition Products Sulfur oxides, Copper oxidesComponent ACGIH TLV OSHA PEL NIOSH IDLH\nCopper (II) sulfate pentahydrate\n(1:1:5)TWA: 1 mg/m3 IDLH: 100 mg/m3\nTWA: 1 mg/m3\nCupric sulfate TWA: 1 mg/m3 IDLH: 100 mg/m3\nTWA: 1 mg/m3\nLegend\nACGIH - American Conference of Governmental Industrial Hygienists\nNIOSH IDLH:  The National Institute for Occupational Safety and Health Immediately Dangerous to Life or Health\nEngineering Measures Ensure that eyewash stations and safety showers are close to the workstation location. Ensure adequate ventilation, especially in confined areas. Personal
+

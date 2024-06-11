@@ -1,5 +1,0 @@
-Question: What type of eye protection is recommended when handling Copper Sulphate?
-Answer:  Answer: Appropriate protective eyeglasses or chemical safety goggles as described by OSHA's eye and face protection regulations in 29 CFR 1910.133 or European Standard EN166. OR  Wear appropriate protective glasses or splash goggles as described by 29 CFR 1910.133, OSHA eye and face protection regulation, or the European standard EN 166. 
-
-Context: ["Incompatible products. Excess heat. Incompatible Materials Strong oxidizing agents\nHazardous Decomposition Products Sulfur oxides, Copper oxidesComponent ACGIH TLV OSHA PEL NIOSH IDLH\nCopper (II) sulfate pentahydrate\n(1:1:5)TWA: 1 mg/m3 IDLH: 100 mg/m3\nTWA: 1 mg/m3\nCupric sulfate TWA: 1 mg/m3 IDLH: 100 mg/m3\nTWA: 1 mg/m3\nLegend\nACGIH - American Conference of Governmental Industrial Hygienists\nNIOSH IDLH:  The National Institute for Occupational Safety and Health Immediately Dangerous to Life or Health\nEngineering Measures Ensure that eyewash stations and safety showers are close to
-

@@ -1,0 +1,5 @@
+Question: Is Titanium Oxide Carcinogenic? If yes, under which regulation and route? Also give me its CAS number.
+Answer:  Answer: Titanium Oxide is carcinogenic under inhalation route. It is regulated by ACGIH, NIOSH, OSHA, IARC, NTP and MEXICO. Its CAS number is 13463-67-7. 
+
+Context: ['  Carcinogens:\n\xa0  ACGIH   NIOSH   OSHA   IARC   NTP      MEXICO\nAluminum Oxide,\nNon-fibrous    A4 Not\nClassifiable as a\nHuman\nCarcinogen No Data  No Data  No Data  No Data\xa0 A4 Not\nClassifiable as a\nHuman\nCarcinogen\nAmorphous Silica, Fused    No Data  NIOSH\ncarcinogen No Data  No Data  No Data\xa0 No Data\nTitanium dioxide    No Data  No Data  No Data  No Data  No Data\xa0 A4 Not\nClassifiable as a\nHuman\nCarcinogen\nAluminum Oxide, Non-fibrous :\nRTECS Number: BD1200000\nInhalation: Inhalation - Rat TCLo: 200 mg/m3/5H/28W (Intermittent)
+

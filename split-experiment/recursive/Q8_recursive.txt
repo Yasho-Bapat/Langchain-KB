@@ -1,9 +1,0 @@
-Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
-Answer:  Instead, use "a", "b", "c" etc. at the beginning of each sentence. 
-
-Answer: Yes, Vitrified Bonded WHEEL is listed under the TSCA inventory. The status of Aluminum Oxide, Non-fibrous and Amorphous Silica, Fused is "Listed". The status of Titanium dioxide is "No Data".
-
-Passage2: 
-
-You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['Hazard(s) identification\nNot classified. Physical hazards\nNot classified. Health hazards\nNot classified. Environmental hazards\nNot classified. OSHA defined hazards\nLabel elements\nNone. Hazard symbol\nSignal word None.\nHazard statement The mixture does not meet the criteria for classification.\nPrecautionary statement\nPrevention Observe good industrial hygiene practices.\nResponse Wash hands after handling.\nStorage Store away from incompatible materials.\nDisposal Dispose of waste and residues in accordance with local authority requirements.\nHazard(s) not otherwise\nclassified (HNOC)None known.\n1 / 7Material name:
-

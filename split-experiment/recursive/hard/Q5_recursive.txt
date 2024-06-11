@@ -1,0 +1,7 @@
+Question: What major countries do we not have exposure guidelines for, for titanium dioxide? What about copper sulfate?
+Answer:  
+
+Answer: We do not have exposure guidelines for titanium dioxide in Mexico. We do not have exposure guidelines for copper sulfate in Illinois and Rhode Island. 
+
+Context: ['3M™Scotch -Brite ™Products,  7447, 7467, General Purpose Pads    02/24/14\n__________________________________________________________________________________________\nPage  4of    10Hyg.\nTitanium Dioxide 13463 -67-7Amer Conf of \nGov. Indust. \nHyg.TWA:10 mg/m3\nTitanium Dioxide 13463 -67-7Chemical \nManufacturer \nRec GuidTWA(as respirable dust):5 \nmg/m3\nTitanium Dioxide 13463 -67-7US Dept of \nLabor -OSHATWA(as total dust):15 mg/m3\nSilica 7631 -86-9Chemical \nManufacturer \nRec GuidTWA(as respirable dust):3 \nmg/m3\nSILICA, AMORPHOUS 7631 -86-9US Dept of \nLabor -OSHATWA concentration:0.8 \nmg/m3;TWA:20 millions of
+

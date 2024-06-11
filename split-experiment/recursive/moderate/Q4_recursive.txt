@@ -1,0 +1,5 @@
+Question: Analyze the regulatory discrepancies for Ammonium Hydroxide in different countries and what is the UN number assigned to it for transport purposes?
+Answer:  
+
+Answer: Ammonium Hydroxide is present in the Massachusetts Right-to-Know Substance List, Pennsylvania Right-to-Know Hazardous Substances and New Jersey Worker and Community Right-to-Know Components. It is also present in the Canada Domestic Substances List / Non-Domestic Substances List (DSL/NDSL) and the United States of America Toxic Substances Control Act (TSCA) List. It is not listed in California Proposition 65. The UN number assigned to Ammonium Hydroxide for transport purposes is UN2672.<|im_end|>
+

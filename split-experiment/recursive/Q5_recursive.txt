@@ -1,6 +1,0 @@
-Question: What type of eye protection is recommended when handling Copper Sulphate?
-Answer:  {'answer': 'Wear appropriate protective eyeglasses or chemical safety goggles as described by OSHA\'s eye and face protection regulations in 29 CFR 1910.133 or European Standard EN166.', 'start': 1375, 'end': 1495}
-{'answer': 'Wear appropriate protective eyeglasses or chemical safety goggles as described by OSHA\'s eye and face protection regulations in 29 CFR 1910.133 or European Standard EN166.', 'start': 1375, 'end': 1495}
-
-You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['______________________________________________________________________________________________Cupric sulfate pentahydrate Revision Date  12-Aug-2014\nHazard Statements\nHarmful if swallowed\nCauses skin irritation\nCauses serious eye irritation\nMay cause respiratory irritation\nMay cause damage to organs through prolonged or repeated exposure\nPrecautionary Statements\nPrevention\nWash face, hands and any exposed skin thoroughly after handling\nDo not eat, drink or smoke when using this product\nWear protective gloves/protect
-

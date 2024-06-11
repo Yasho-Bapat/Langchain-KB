@@ -1,0 +1,7 @@
+Question: Are there any commonalities between scotch brite and havaklean KP? Which of them could be more dangerous in manufacturing?
+Answer:  
+
+Scotch Brite and Havaklean KP are two different products that cannot be compared in terms of danger. Scotch Brite is a non-reactive product that is considered safe under normal use conditions. Havaklean KP, on the other hand, is not mentioned in this context and therefore cannot be compared to Scotch Brite. 
+
+Context: ['3M™Scotch -Brite ™Products,  7447, 7467, General Purpose Pads    02/24/14\n__________________________________________________________________________________________\nPage  10of    10Health: 0  Flammability: 1  Instability: 0  Special Hazards: None\n \nNational Fire Protection Association (NFPA) hazard ratings are designed for use by emergency response personnel to address \nthe hazards that are presented by short -term, acute exposure to a material under conditions of fire, spill, or similar \nemergencies. Ha zard ratings are primarily based on the inherent physical and toxic properties of the material but also include \nthe toxic properties of combustion or decomposition products that are known to be generated in significant quantities.\n \nHMIS Hazard Classifica tion\nHealth: 0   Flammability: 
+

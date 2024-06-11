@@ -1,0 +1,3 @@
+Question: Are there any commonalities between scotch brite and havaklean KP? Which of them could be more dangerous in manufacturing?
+Answer:  Answer: Scotch Brite and Havaklean KP are two different products that cannot be compared in terms of danger. Scotch Brite is a non-hazardous product that is not classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200. It is considered to be non-reactive under normal use conditions. Havaklean KP, on the other hand, is a hazardous product that is classified as a skin irritant and a serious eye irritant. It is also classified as a hazardous substance according to the OSHA Hazard Communication Standard. Therefore, Havaklean KP is more dangerous than Scotch Brite in manufacturing.<|im_end|>
+

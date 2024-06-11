@@ -1,0 +1,5 @@
+Question: What is the UN number assigned to Ethyl Alcohol for transport purposes?
+Answer:  Answer: UN1170 
+
+Context: ['Other:  No information available. Section 13 - Disposal Considerations  \n \nChemical waste generators must determine whether a discarded chemical is classified as a \nhazardous waste. US EPA guidelines for the classification determinati on are listed in 40 CFR \nParts 261.3. Additionally, waste generators must consult state and local hazardous waste \nregulations to ensure complete and accurate classification. RCRA P -Series:  None listed. RCRA U -Series:  None listed. Section 14 - Transport Info rmation  \n \n US DOT  Canada TDG  \nShipping Name:  ETHANOL  No information available. Hazard Class:  3  \nUN Number:  UN1170   \nPacking Group:  II  \n \nSection 15 - Regulatory Information  \n \nUS FEDERAL  \n \nTSCA  \n     CAS# 64 -17-5 is listed on the TSCA inventory. CAS# 7732 -18-5 is listed on the TSCA inventory. Health & Safety Reporting List  \n     None of the chemicals are on the Health
+

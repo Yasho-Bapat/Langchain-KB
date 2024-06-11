@@ -1,0 +1,5 @@
+Question: What are the Chemicals present in Vitrified Bonded STICK?
+Answer:   Answer: Aluminum Oxide, Non-fibrous, Amorphous Silica, Fused, Titanium dioxide. 
+
+Context: ['SAFETY DATA SHEET\n1. Identification\nVitrified Bonded Product Product identifier\nOther means of identification\nT000119 Product code\nAbrasive Product Recommended use\nNone known. Recommended restrictions\nManufacturer/Importer/Supplier/Distributor information\nUnited States\nSaint-Gobain Abrasives Address:\nOne New Bond Street\nWorcester, MA 01615800-551-4413 General Phone Number:\nwww.Nortonabrasives.com Website:\nCanada\nSaint-Gobain Canada, Inc. Company name:\n28 Albert Street, W. Address:\nPlattsville, ON NOJ 1S0\n519-684-7441 General Phone Number:\nwww.Nortonabrasives.com Website:\n508-795-5000 Emergency phone number:\nFor emergencies in the US or Canada, call CHEMTREC: 800-424-9300 CHEMTREC:\n2. Hazard(s) identification\nNot classified. Physical hazards\nNot classified. Health hazards\nNot classified. Environmental hazards\nNot classified. OSHA defined hazards\nLabel elements\nNone. Hazard
+

@@ -1,0 +1,5 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:  
+
+Aqueous solution, alcohol, foam, CO, dry chemical, water fog may be used.<|im_end|>
+

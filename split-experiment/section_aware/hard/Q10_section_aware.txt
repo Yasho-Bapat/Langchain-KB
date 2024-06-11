@@ -1,0 +1,5 @@
+Question: Which chemical is most hazardous for the environment?
+Answer:   Answer: None of the chemicals in this product are listed as Hazardous Substances under the CWA. None of the chemicals in this product are listed as Priority Pollutants under the CWA. None of the chemicals in this product are listed as Toxic Pollutants under the CWA. 
+
+Context: ['24.3°CFish: Rainbow trout: LC50 = 11200 mg/L; 24 Hr; Fingerling (Unspecified)Bacteria: \nPhytobacterium phosphoreum: EC50 = 34900 mg/L; 5 -30 min; Microtox test When spilled \non land it is apt to volatilize, biodegrade, and leach into the ground water, but no data on \nthe rates of these processes could be found. Its fate in ground water is unknown. When \nreleased into water it will volatilize and probably biodegrade. It would not be expected t o \nadsorb to sediment or bioconcentrate in fish.  \nEnvironmental:  When released to the atmosphere it will photodegrade in hours (polluted \nurban atmosphere) to an estimated range of 4 to 6 days in less polluted areas
+

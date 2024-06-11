@@ -1,5 +1,0 @@
-Question: What is the UN number assigned to Argon Liquid for transport purposes?
-Answer:  Answer: Ammonia Solution has a UN number of 2672 assigned to it for transport purposes.  
-
-Context: ['Safety Data Sheet\nSizes:\nUN Number:\nProper Shipping Name:\nHazard Class:\nPacking Group:\nHazard Placard Labels:\n14.2. Transportation by Air - International Air Transport Association (IATA)\nSizes:\nUN Number:\nProper Shipping Name:\nHazard Class:\nPacking Group:\nHazard Placard Labels:UN2672\nAmmonia Solution\n8\nIII\n1 L, 4 L, 4 L, 16 Gal, 20 L, 500 mL\n15.1. Occupational Safety and Health Administration (OSHA) Hazards\nNot listed.', 'UN proper shipping name: Not regulated as hazardous material for transportation. Transport hazard class(es): Not regulated as hazardous material for transportation. Packing group: Not regulated as hazardous material for transportation. Environmental hazards: Not regulated as hazardous material for transportation.', '12.1. Ecotoxicity\nToxic to aquatic life. Avoid release to the environment. Dispose of contents in accordance with local, state, federal and international regulations.Toxic to \naquatic life. Avoid release to
-

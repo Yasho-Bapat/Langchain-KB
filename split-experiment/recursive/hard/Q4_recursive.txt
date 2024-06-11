@@ -1,0 +1,9 @@
+Question: Evaluate safe disposability of all products made by Saint-Gobain.
+Answer:   Answer: Dispose of contents/ container in accordance w ith the local/regional/national/international regulations. The substrate that was abraded must be considered as a factor in the disposal method for this product.  Dispose of waste product in a permitted industrial waste facility.  As a disposal alternative, incinerate in a permitted waste incineration facility.  Proper destruction may require the use of additional fuel during incineration processes.  Combustion products will include halogen acid (HCl/HF/HBr).  F acility must be capable of handling halogenated materials.  EPA Hazardous Waste Number (RCRA): Not regulated. Consult with the US EPA Guidelines listed in 40 CFR Part 261.3 for the classifications of hazardous waste prior to disposal. Furthermore, consult with your state and local waste requirements or guidelines, if applicable, to ensure compliance. Arrange disposal in accordance to the EPA and/or state and local guidelines. 
+
+Test case 2
+
+The following is the context for test case 2.
+
+Context: ['SAFETY DATA SHEET\n1. Identification\nVitrified Bonded Product Product identifier\nOther means of identification\nT000119 Product code\nAbrasive Product Recommended use\nNone known. Recommended restrictions
+

@@ -1,0 +1,9 @@
+Question: Evaluate the environmental impact of Citrisurf when released in large quantities.
+Answer:   Answer: Citrisurf has no information on ecotoxicological effects. Please contact the address or phone number listed on the first page of the SDS for additional ecotoxicological information on this material and/or its components. Please contact the address or phone number listed on the first page of the SDS for additional chemical fate information on this material and/or its components. 
+
+Test case 3:
+
+Input: 
+
+context = ['SECTION 1: Identification of the substance/mixture and of the company/\nundertaking\n1.1. Product identifier\nTrade name: 3M ESPE RelyX Unicem 2 Automix\n1.2. Relevant identified uses of the substance or mixture and uses advised\nagainst\nUse of the substance/mixture: Dental cement\n1.3. Details of the supplier of the safety data sheet\nCompany/undertaking identification:\n3M ESPE AG\nAddress: ESPE Platz\n82229 Seefeld, Germany\nPhone: +49 (0) 8152 700\nFax: +49 (0) 8152 701 495\nE-mail address: espe-info@mmm.com\n1.4. Emergency telephone number\nEmergency telephone number:\n+49 (0
+

@@ -1,4 +1,0 @@
-Question: What storage condition is recommended for this Copper Sulphate?
-Answer:  
-Answer: Store in a cool, dry, well ventilated area away from sources of heat, combustible materials, and incompatible substances. Keep container tightly closed when not in use.<|im_end|>
-

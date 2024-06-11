@@ -1,0 +1,5 @@
+Question: If I live in Quebec, how much aluminum oxide can I come in contact with? What do I do if it accidentally goes into my eyes?
+Answer:  
+
+If you live in Quebec, you can come in contact with 10 mg/m3 of aluminum oxide. If it accidentally goes into your eyes, you should wear appropriate protective glasses or splash goggles as described by 29 CFR 1910.133, OSHA eye and face protection regulation, or the European standard EN 166.<|im_end|>
+

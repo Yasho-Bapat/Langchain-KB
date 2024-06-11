@@ -1,0 +1,7 @@
+Question: What is the proper shipping name of Ammonium Hydroxide and under which regulatory agencies is it listed?
+Answer:  
+
+Answer: The proper shipping name of Ammonium Hydroxide is not regulated as hazardous material for transportation. It is not listed under WHMIS classification based on the recommended option (Option 4) found in the Canada Gazette Part II, Vol. 149, No.3, page 458. It is present in the Canada IDL, Japan ENCS, EINECS Number, South Korea KECL, and Australia AICS. It is also present in the TSCA Inventory. It is listed under state right to know lists in California, New Jersey, Pennsylvania, Minnesota, and Massachusetts. It is not listed under Section 313. It is not present on state lists from CA, PA, MN, MA, FL, or NJ. 
+
+Context: ['Safety Data Sheet\n2.1. Classification of the Substance or Mixture\nClassification (GHS-US)\nNot classified\n2.2. Label Elements\nNot applicable\n2.3. Other Hazards\nOther Hazards Not Contributing to the Classification: None known.\n  SECTION 3: Composition / Information on Ingredients\n3.1. Substance\nName\n:1,2,3,4,5,6,7,8-Octahydro-2
+

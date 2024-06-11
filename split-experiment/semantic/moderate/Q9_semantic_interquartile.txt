@@ -1,0 +1,7 @@
+Question: Provide a risk assessment for handling and storing large quantities of Copper Sulphate.
+Answer:  
+
+Answer: Copper Sulphate is considered hazardous by the 2012 OSHA Hazard Communication Standard. It is harmful if swallowed, causes skin irritation, serious eye irritation, and respiratory irritation. It may cause damage to organs through prolonged or repeated exposure. It is classified as an acute oral toxicity Category 4, skin corrosion/irritation Category 2, serious eye damage/eye irritation Category 2, and specific target organ toxicity (single exposure) Category 3. It is also classified as specific target organ toxicity (repeated exposure) Category 2. It is toxic to aquatic organisms and may cause long-term adverse effects in the aquatic environment. It should be stored in a well-ventilated place and kept in a tightly closed container. Personal protective equipment should be worn when handling it. Adequate ventilation should be ensured, and dust formation should be avoided. It should not be allowed to contaminate the ground water system. 
+
+Context: ['SAFETY DATA SHEET\nCreation Date  19-Oct-2009 Revision Date  12-Aug-2014 Revision Number  1\n1. Identification\nProduct Name Cupric sulfate pentahydrate\nCat No. : BP346-500; C489-1; C489-
+

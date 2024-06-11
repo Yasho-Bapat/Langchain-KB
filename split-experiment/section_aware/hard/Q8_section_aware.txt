@@ -1,0 +1,7 @@
+Question: What is the proper shipping name of Ammonium Hydroxide and under which regulatory agencies is it listed?
+Answer:  
+
+Answer: Ammonium Hydroxide is not regulated as hazardous material for transportation. It is not listed under TSCA Section 12b. None of the chemicals in this material have a SNUR under TSCA. None of the chemicals in this material have an RQ. None of the chemicals in this product have a TPQ. None of the chemicals in this product are considered highly hazardous by OSHA. CAS# 64-17-5 can be found on the following state right to know lists: California, New Jersey, Pennsylvania, Minnesota, Massachusetts. CAS# 7732-18-5 is not present on state lists from CA, PA, MN, MA, FL, or NJ. Ammonium Hydroxide is not listed under WHMIS classification based on the recommended option (Option 4) found in the Canada Gazette Part II, Vol. 149, No.3, page 458. 
+
+Context: ['Safety Data Sheet\n2.1. Classification of the Substance or Mixture (in accordance with OSHA HCS 29 CFR 1910.1200)\nClassification (GHS-US)\nSkin Corrosion/Irritation, Category 1A\nSerious Eye Damage/Eye Irr
+

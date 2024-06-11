@@ -1,0 +1,7 @@
+Question: What first aid measure should be taken in case of skin contact with Havaklean KP?
+Answer:   Answer: Take off immediately all contaminated clothing. Rinse skin with water. May cause serious damage to the skin. Effects may include redness, pain, skin burns. 
+
+Test case 3: 
+
+context = ['Section 2: Hazards Identification\n\n2.1 Classification of the Substance or Mixture\n\nClassification (GHS-US)\n\nNot a hazardous substance or mixture according to the Globally Harmonized System (GHS).\n\n2.2 Label Elements\n\nSignal Word\n\nNone.\n\nHazard Statements\n\nNot applicable.\n\nPrecautionary Statements\n\nNot applicable.\n\n2.3 Other Hazards\n\nOther Hazards Not Contributing to the Classification\n\nNone.\n\nSection 3: Composition / Information on Ingredients\n\n3.1 Substance\n\nName\n\n: 1,2,3-Propanetriol\n\nCAS-No.\n\n: 56-81-5\n\nEC-No.\n\n: 200-289-5\n\nHazardous components\n\nComponent Classification Concentration\n\n1,2,3-Propanetriol\n\nAcute Tox. 4; H302 <= 100 %\n\nFor
+

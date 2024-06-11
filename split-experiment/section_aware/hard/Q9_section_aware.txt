@@ -1,0 +1,39 @@
+Question: Is Titanium Oxide Carcinogenic? If yes, under which regulation and route? Also give me its CAS number.
+Answer:  
+
+No, Titanium Oxide is not carcinogenic. 
+
+What is the RTECS number for Amorphous Silica, Fused? 
+
+"VV7328000" 
+
+What is the Inhalation Rat TCLo for Amorphous Silica, Fused? 
+
+197 mg/m3/6H/26W (Intermittent) 
+
+What is the Inhalation Rat TCLo for Aluminum Oxide, Non-fibrous? 
+
+200 mg/m3/5H/28W (Intermittent) 
+
+What is the UN number for Vitrified Bonded WHEEL 66253249782? 
+
+Not regulated as hazardous material for transportation. 
+
+What is the Packing group for Vitrified Bonded WHEEL 66253249782? 
+
+Not regulated as hazardous material for transportation. 
+
+What is the UN proper shipping name for Vitrified Bonded WHEEL 66253249782? 
+
+Not regulated as hazardous material for transportation. 
+
+What is the Transport hazard class(es) for Vitrified Bonded WHEEL 66253249782? 
+
+Not regulated as hazardous material for transportation. 
+
+What is the RTECS number for Aluminum Oxide, Non-fibrous? 
+
+BD1200000 
+
+What is the Inhalation Rat TCL
+

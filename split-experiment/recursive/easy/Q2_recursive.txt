@@ -1,0 +1,5 @@
+Question: What are the hazards associated with 341D Belts?
+Answer:  Answer:  341D Belts are not classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200. There are no hazards otherwise classified. HMIS Hazard Classification for Health is 0, Flammability is 1, Physical Hazard is 0 and Personal Protection is X-See PPE section. There are no hazardous decomposition products. 
+
+Context: ['3M™Abrasive Products, 341D Belts    03/14/14\n__________________________________________________________________________________________\n  Page  1 of    10\nSafety Data Sheet\nCopy right,2014,3M Company.\nAll rights reserved. Copying and/or downloading of this information for the purpose of properly utilizing 3M products is \nallow ed provided that: (1) the information is copied in full with no changes unless prior w ritten agreement is obtained from \n3M, and (2) neither the copy nor the original is resold or otherw ise distributed with the intent ion of earning a profit thereon.\nDocument Group: 25-8517 -2 Version Number: 2.02\nIssue Date: 03/14/14 Supercedes Date: 03/22/13
+

@@ -1,5 +1,0 @@
-Question: What is the UN number assigned to Ethyl Alcohol for transport purposes?
-Answer:   Answer: Ethyl Alcohol is assigned UN1170 for transport purposes. 
-
-Context: ['This information is provided in good faith but no warranty, express or implied, is made.  \nSection 1 - Chemical Product and Company Identification  \n \nMSDS Name:  Bromine  \nCatalog Numbers:  AC192910000, AC192910010, AC192910025, AC192915000, AC442630000, \nAC442630010, AC448970000, AC448970010, B/4560/53, B/4560/53LC, NC9251392, \nNC9251394, S79986, S799861, S80017, S800171, S80017B, S80017C, S80017D, SLC2205  \nSynonyms:  None  \nCompany Identification:  \nFisher Scientific  \n1 Reagent Lane  \nFair Lawn, NJ 07410  \nFor information, call: 201-796-7100  \nEmergency Number: 201-796-7100  \nFor CHEMTREC assistance, call: 800-424-9300 
-
