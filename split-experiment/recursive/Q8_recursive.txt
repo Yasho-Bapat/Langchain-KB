@@ -1,44 +1,19 @@
-Question: What should be done to prevent from causing environmental contamination in the event of a spill?
-Answer:  
-Avoid runoff into storm sewers, ditches, and waterways. Contain spills with an inert absorbent material such as soil or sand. Prevent from spreading by covering, diking or other means. Provide ventilation. Clean up spills immediately observing precautions in the protective equipment section. Place into a suitable container for disposal. After removal, flush spill area with soap and water to remove trace residue. 
+Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
+Answer:  Only spell out the number at the beginning of a sentence. 
 
-Submit Answer **You need to be logged in to answer** 
+No, Vitrified Bonded WHEEL is not listed under the TSCA inventory.
 
-Related Questions
+Question: Is Aluminum Oxide, Non-fibrous listed under the TSCA inventory?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
 
-What is the name of the material? 
+Yes, Aluminum Oxide, Non-fibrous is listed under the TSCA inventory.
 
-What is the material's UN number? 
+Question: Is the product classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
 
-What is the name of the supplier? 
+No, the product is not classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200.
 
-What is the chemical formula of this material? 
+Question: Does the product cause skin irritation?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
 
-What is the material's hazard class? 
+Yes, the product causes skin irritation.
 
-What is the material's packing group? 
-
-What is the percentage purity of the material? 
-
-What is the material's CAS number? 
-
-What is the name of the manufacturer? 
-
-What is the material's molecular formula? 
-
-What is the molecular weight of the material? 
-
-What is the material's appearance? 
-
-What is the material's odour? 
-
-What is the material's taste? 
-
-What is the material's boiling point? 
-
-What is the material's melting point? 
-
-What is the material's density? 
-
-What is the material's sol
+Question: Does the product cause respiratory tract irritation?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out
 

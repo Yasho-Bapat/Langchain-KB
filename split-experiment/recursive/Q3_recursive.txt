@@ -1,9 +1,3 @@
-Question: What is the recommended action if the Ammonium Hydroxide is swallowed?
-Answer:  (20 Marks)
-Answer: Rinse mouth. Do not induce vomiting. Dilute with water or milk. Do not induce vomiting. Call a physician if necessary.
-```
-
-#### Example 2
-```
-context = ['Safety Data Sheet\n2.3. WHMIS ClassificationWHMIS classification is not included based on the recommended option (Option 4) found in the Canada Gazette Part II, Vol. 149, No.3, page 458\n2.4. Hazards not Otherwise Classified or Covered by GHS\nData not available.\n  SECTION 3: Composition / Information on Ingredients\n3.1. Components of Substance or Mixture\nChemical Name Formula Molecular Weight CAS Number Weight%\nWater H₂O 18.01 g/mol 7732-18-5 86.74%\nAmmonium Hydroxide NH₄OH 35.04 g/mol 1336-21-6 13.26%\nEye Contact:  SECTION 4: First-Aid Measures\n4.1. General First Aid Information\nIF IN EYES: Rinse cautiously with water for several minutes. Remove contact lenses, if present and easy to do. Continue rinsing. \nMay cause severe
+Question: What storage condition is recommended for this Copper Sulphate?
+Answer:  Answer: Keep containers tightly closed in a dry, cool and well-ventilated place. Excess heat. Incompatible Materials Strong oxidizing agents.<|im_end|>
 

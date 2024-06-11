@@ -1,0 +1,43 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:   ",
+        "answers": [
+            {
+                "answer_start": 43,
+                "text": "Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires involving this material."
+            }
+        ]
+    },
+    {
+        "question": "What is Citric Acid?",
+        "answers": [
+            {
+                "answer_start": 1349,
+                "text": "Citric Acid is a general food additive."
+            }
+        ]
+    },
+    {
+        "question": "What is the pH of Citrisurf?",
+        "answers": [
+            {
+                "answer_start": 1712,
+                "text": "pH @ 100 %: 3.0 ± 0.2"
+            }
+        ]
+    },
+    {
+        "question": "What is the appearance of Citrisurf?",
+        "answers": [
+            {
+                "answer_start": 1682,
+                "text": "Appearance: Clear, pale-colorless"
+            }
+        ]
+    },
+    {
+        "question": "What is the specific gravity of Citrisurf?",
+        "answers": [
+            {
+                "answer_start": 1683,
+                "text": "Spec ific Gravity: 1
+

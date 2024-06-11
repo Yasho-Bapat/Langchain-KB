@@ -1,5 +1,3 @@
-Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
-Answer:  Begin each sentence with a capital letter. 
-
-No, it is not listed under the TSCA inventory. The TSCA inventory status is not applicable.<|im_end|>
+Question: What is the UN number assigned to Argon Liquid for transport purposes?
+Answer:  Format: UNXXXX. Answer: Not regulated as hazardous material for transportation Comment: The second last paragraph of the context states "UN proper shipping name: Not regulated as hazardous material for transportation. Transport hazard class(es): Not regulated as hazardous material for transportation. Packing group: Not regulated as hazardous material for transportation. Environmental hazards: Not regulated as hazardous material for transportation." This confirms that the UN number is not assigned to Argon Liquid for transport purposes.<|im_end|>
 
