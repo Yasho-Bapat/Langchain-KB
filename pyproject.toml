@@ -2,7 +2,7 @@
 name = "langchain-kb"
 version = "0.1.0"
 description = "Knowledge Base implementation using Langchain"
-authors = ["last-brain-cell <naadkd@gmail.com>"]
+authors = ["last-brain-cell <naadkd@gmail.com>", "yasho-bapat <yashobapat3006@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
