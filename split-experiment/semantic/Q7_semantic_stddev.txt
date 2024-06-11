@@ -1,0 +1,7 @@
+Question: What should be done to prevent from causing environmental contamination in the event of a spill?
+Answer:    Answer: Absorb spill with inert material (e.g. dry sand or  earth)then place in a chemical waste container. A void runoff into storm sewers and ditches which lead to waterways. Follow all governm ent regulations. Avoid discharge into drains, water courses or onto the ground.  
+
+
+
+You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['SECTION 6: ACCIDENTAL RELEASE MEASURES\nPersonal precautions, protective equipment and emergency procedures: \nPersonal Precautions: Evacuate area and keep unnecessary and unprotected personnel from entering the spill area. Use proper\npersonal protective equipment as listed in Section 8. Environmental precautions: \nEnvironmental Precautions: Avoid runoff into storm sewers, ditches, and waterways.7. Handling and Storage\nPrecautions for safe handling: \nHandling: Avoid contact with skin and eyes. Wash thoroughly after handling. Use with adequate ventilation. Do not ingest. \nStorage: Store in a cool, well-ventilated area away from heat and oxidizing agents.', 'SECTION 6: ACCIDENT
+

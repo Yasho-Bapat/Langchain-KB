@@ -1,19 +1,9 @@
 Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
-Answer:  Only spell out the number at the beginning of a sentence. 
+Answer:  Instead, use "a", "b", "c" etc. at the beginning of each sentence. 
 
-No, Vitrified Bonded WHEEL is not listed under the TSCA inventory.
+Answer: Yes, Vitrified Bonded WHEEL is listed under the TSCA inventory. The status of Aluminum Oxide, Non-fibrous and Amorphous Silica, Fused is "Listed". The status of Titanium dioxide is "No Data".
 
-Question: Is Aluminum Oxide, Non-fibrous listed under the TSCA inventory?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
+Passage2: 
 
-Yes, Aluminum Oxide, Non-fibrous is listed under the TSCA inventory.
-
-Question: Is the product classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
-
-No, the product is not classified as hazardous according to OSHA Hazard Communication Standard, 29 CFR 1910.1200.
-
-Question: Does the product cause skin irritation?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out the number at the beginning of a sentence. 
-
-Yes, the product causes skin irritation.
-
-Question: Does the product cause respiratory tract irritation?. Make sure there are full stops after every sentence.Don't use numerical numbering. Only spell out
+You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['Hazard(s) identification\nNot classified. Physical hazards\nNot classified. Health hazards\nNot classified. Environmental hazards\nNot classified. OSHA defined hazards\nLabel elements\nNone. Hazard symbol\nSignal word None.\nHazard statement The mixture does not meet the criteria for classification.\nPrecautionary statement\nPrevention Observe good industrial hygiene practices.\nResponse Wash hands after handling.\nStorage Store away from incompatible materials.\nDisposal Dispose of waste and residues in accordance with local authority requirements.\nHazard(s) not otherwise\nclassified (HNOC)None known.\n1 / 7Material name:
 

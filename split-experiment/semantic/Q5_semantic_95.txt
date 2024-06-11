@@ -1,10 +1,10 @@
 Question: What type of eye protection is recommended when handling Copper Sulphate?
 Answer:  Only use alphabets. 
 
-A. Tightly fitting safety goggles. 
-B. Safety glasses or goggles. 
-C. Respirator. 
-D. Protective eyeglasses. 
+A. Tightly fitting safety goggles.
+B. Safety glasses or goggles.
+C. Respirator.
+D. Protective eyeglasses.
 
 Answer: B
 

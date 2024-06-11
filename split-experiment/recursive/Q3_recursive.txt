@@ -1,3 +1,5 @@
 Question: What storage condition is recommended for this Copper Sulphate?
-Answer:  Answer: Keep containers tightly closed in a dry, cool and well-ventilated place. Excess heat. Incompatible Materials Strong oxidizing agents.<|im_end|>
+Answer:  Answer: Keep containers tightly closed in a dry, cool and well-ventilated place.
+
+Context: ['SAFETY DATA SHEET\nCreation Date  19-Oct-2009\nRevision Date  12-Aug-2014\nRevision Number  1\n1. Identification\nProduct Name 2-Propanol, Anhydrous\nCat No. : A407-1; A407-4; A407-20; A407-200; A407-500\nSynonyms Isopropyl alcohol, sec-Propyl alcohol, IPA, Isopropanol, Propan-2-ol, Dimethyl carbinol, Rubbing alcohol\nRecommended Use Laboratory chemicals.\nUses advised against Food, drug, pesticide or biocidal product use\nDetails of the supplier of the safety data sheet\n2. Hazard(s) identification\nClassification\nThis chemical is considered hazardous by the 2012 OSHA Hazard Communication Standard (29 CFR 1910.1200)\nLabel Elements\nSignal Word\nDanger\nHazard Statements\nH225 Highly flammable liquid and vapour.\nH319 Causes serious eye irritation.\nPrecautionary Statements\nPrevention\nKeep away from heat/sparks/open flames/hot surfaces.
 

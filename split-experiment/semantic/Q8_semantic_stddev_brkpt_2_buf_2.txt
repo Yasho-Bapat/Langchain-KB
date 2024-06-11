@@ -1,0 +1,9 @@
+Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
+Answer:  
+
+Answer: Yes, Vitrified Bonded WHEEL is listed under the TSCA inventory.
+
+Passage 6: 
+
+You are an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES. Context: ['Amorphous Silica, Fused \xa0  262-373-8    Listed\n\xa0TSCA Inventory\nStatus\xa0 \xa0 \xa0 \xa0 \xa0\nAluminum Oxide, Non-fibrous \xa0 Listed     \nAmorphous Silica, Fused \xa0 Listed     \nAluminum Oxide, Non-fibrous :\nCanada IDL: Identified under the Canadian Hazardous Products Act Ingredient Disclosure List: 0.1%.50(1298)\nAmorphous Silica, Fused :\nCanada IDL: Identified under the Canadian Hazardous Products Act Ingredient Disclosure List: 0.1%.1404(1487)\nAluminum Oxide, Non-fibrous :\nEC Number: 215-691-6\nAmorphous Silica, Fused :\nEC Number:
+

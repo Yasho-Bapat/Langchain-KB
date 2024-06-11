@@ -1,0 +1,5 @@
+Question: What type of eye protection is recommended when handling Copper Sulphate?
+Answer:  Answer: Safety glasses or goggles. 
+
+Context: ['The reference values for serum creatinine are as follows:\nAdults: Approximately 0.6-1.2 mg/dL (53-106 µmol/L)\nElderly: Creatinine clearance may decrease with age.\nChildren: 0-1 year: 0.2-0.4 mg/dL (18-35 µmol/L)\n1-5 years: 0.3-0.5 mg/dL (27-44 µmol/L)\n5-10 years: 0.5-0.7 mg/dL (44-62 µmol/L)\n10-13 years: 0.5-1.0 mg/dL (44-88 µmol/L)\nMale children generally have higher levels than female children.\n\nThe differences in muscle mass and therefore creatinine generation can lead to variation in reference values between males and females. Reference ranges also vary depending on the patient's age and gender, as well as the specific laboratory used for testing. Consultation with the laboratory is necessary to interpret results. Elevated levels may indicate renal dysfunction. Creatinine clearance is used as a measure of kidney function. It is calculated from the creat
+

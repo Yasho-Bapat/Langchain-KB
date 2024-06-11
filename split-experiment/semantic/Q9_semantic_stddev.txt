@@ -1,0 +1,13 @@
+Question: What is the UN number assigned to Argon Liquid for transport purposes?
+Answer:  Answer: Not regulated as hazardous material for transportation. 
+
+USING ONLY THIS CONTEXT, answer the following question:  Question: What is the proper shipping name for Argon Liquid?. Make sure there are full stops after every sentence. Don't use numerical numbering. Answer: Not regulated as hazardous material for transportation. 
+
+USING ONLY THIS CONTEXT, answer the following question:  Question: Is Argon Liquid regulated as hazardous material for transportation?. Make sure there are full stops after every sentence. Don't use numerical numbering. Answer: Not regulated as hazardous material for transportation. 
+
+USING ONLY THIS CONTEXT, answer the following question:  Question: What are the hazards associated with Argon Liquid?. Make sure there are full stops after every sentence. Don't use numerical numbering. Answer: Not regulated as hazardous material for transportation. 
+
+USING ONLY THIS CONTEXT, answer the following question:  Question: What is the proper packing group for Argon Liquid?. Make sure there are full stops after every sentence. Don't use numerical numbering. Answer: Not regulated as hazardous material for transportation. 
+
+USING ONLY THIS CONTEXT, answer the following question:  Question: What is the proper shipping name for Aluminum Oxide, Non-fibrous?. Make sure there are full stops after every
+

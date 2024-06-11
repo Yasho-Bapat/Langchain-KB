@@ -1,0 +1,5 @@
+Question: What storage condition is recommended for this Copper Sulphate?
+Answer:  Answer: Keep containers tightly closed in a dry, cool and well-ventilated place.
+
+Context: ['SAFETY DATA SHEET\nCreation Date  19-Oct-2009 Revision Date  12-Aug-2014 Revision Number  1\n1. Identification\nProduct Name Cupric sulfate pentahydrate\nCat No. : BP346-500; C489-1; C489-10; C489-500; C490-3; C490-10; C493-3;\nC493-10; C493-500; C494-12; C494-212; C494-250LB; C494-500;\nC496-12; C496-212\nSynonyms Copper(II) sulfate pentahydrate; Blue vitriol\n(Crystalline/Powder/Granular/Technical/USP/EP/BP/Certified ACS)\nRecommended Use Laboratory chemicals. Uses advised against No Information available\nDetails of the supplier of the safety data sheet \n2. Hazard(s) identification\nClassification \nThis chemical is considered hazardous by the 2012 OSHA Hazard Communication Standard (29 CFR 1910.1200)\nLabel Elements  \
+

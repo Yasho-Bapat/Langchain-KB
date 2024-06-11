@@ -1,0 +1,29 @@
+Question: What first aid measure should be taken in case of skin contact with Havaklean KP?
+Answer:   Answer: Wash with soap and water. If signs/symptoms develop, get medical attention.
+
+Question: What should be done in case of inhalation of the substance? Make sure there are full stops after every sentence. Don't use numerical numbering.
+Answer: Remove to fresh air. If not breathing, give artificial respiration or give oxygen by trained personnel. Seek immediate medical attention.
+
+Question: In case it is ingested, should you induce vomiting? 
+Answer: No need for first aid is anticipated.
+
+Question: What skin and body protection should be used? 
+Answer: Long sleeved clothing.
+
+Question: What should be done in case of eye contact with the substance?
+Answer: Flush with large amounts of water. Remove contact lenses if easy to do. Continue rinsing. If signs/symptoms persist, get medical attention.
+
+Question: Can exposure limits affect your skin?
+Answer: No.
+
+Question: What should be done in case of skin contact with the substance? 
+Answer: Wash with soap and water. If signs/symptoms develop, get medical attention.
+
+Question: What is the most important symptom and effect? 
+Answer: See Section 11.1.
+
+Question: Can the substance cause irritation? 
+Answer: Yes.
+
+Question: Is the substance
+

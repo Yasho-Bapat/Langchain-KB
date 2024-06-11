@@ -18,7 +18,7 @@ dotenv.load_dotenv()
 class SplittingTest:
     def __init__(self, splitter_name):
         self.connection = os.getenv("DATABASE_URL")
-        self.collection_name = "my_docs"
+        self.collection_name = os.getenv("COLLECTION_NAME")
         self.docs_dir = "../docs"
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         self.embedding_function = AzureOpenAIEmbeddings(deployment="langchain-splitting-test1")
@@ -54,7 +54,7 @@ class SplittingTest:
             splitter = RecursiveCharacterTextSplitter()
             self.split_docs = splitter.split_documents(self.documents)
         elif self.splitter_name == "semantic":
-            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_amount=self.brkpt)
+            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile") # change between interquartile, standard_deviation and percentile for different breakpoint options.
             self.split_docs = splitter.split_documents(self.documents)
         elif self.splitter_name == "section_aware":
             section_headers = [
@@ -101,11 +101,11 @@ class SplittingTest:
         # code will change for Azure AI llm
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
-            + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES."
-            + f"Context: {[doc.page_content for doc in docs]} "
-            + "USING ONLY THIS CONTEXT, answer the following question: "
-            + f"Question: {query}. Make sure there are full stops after every sentence."
-            + "Don't use numerical numbering."
+            + " analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE ONLY FOR ACADEMIC PURPOSES."
+            + f" Context: {[doc.page_content for doc in docs]}"
+            + " USING ONLY THIS CONTEXT, answer the following question: "
+            + f" Question: {query}. Make sure there are full stops after every sentence."
+            + " Don't use numerical numbering."
         )
         return result
 
@@ -118,7 +118,7 @@ class SplittingTest:
         for i, question in enumerate(questions):
             answer = self.query_documents(question, 8)
             if self.splitter_name == "semantic":
-                filename = f"{self.splitter_name}/Q{i + 1}_{self.splitter_name}_{self.brkpt}.txt"
+                filename = f"{self.splitter_name}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
             else:
                 filename = f"{self.splitter_name}/Q{i+1}_{self.splitter_name}.txt"
             with open(filename, 'w', encoding="utf-8") as f:
@@ -132,9 +132,9 @@ class SplittingTest:
 
 if __name__ == "__main__":
     # splitters = ["recursive"]
-    #splitters = ["semantic"]
+    splitters = ["semantic"]
     # splitters = ["section_aware"]
-    splitters = ["recursive", "semantic", "section_aware"]
+    # splitters = ["recursive", "semantic", "section_aware"]
 
     questions = [
         "What are the Chemicals present in Vitrified Bonded STICK?",
@@ -146,7 +146,7 @@ if __name__ == "__main__":
         "What type of extinguishing media is suitable for a fire involving Citrisurf?",
         "What should be done to prevent from causing environmental contamination in the event of a spill?",
         "Is Vitrified Bonded WHEEL listed under the TSCA inventory?",
-        "What is the UN number assigned to Argon Liquid for transport purposes?"
+        "What is the UN number assigned to Ethyl Alcohol for transport purposes?"
     ]
 
     for splitter in splitters:

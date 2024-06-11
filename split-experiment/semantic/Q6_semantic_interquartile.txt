@@ -1,0 +1,5 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:   Answer:  Alcohol, foam, CO, dry che mical, water fog m ay be used.  ###
+
+Context: ['12/01/17 Stellar Solutions: CitriSurf 2250 Page 3 of 5\nSEC TION V - FIRE AND EXPLOSION INFORMATION (continued)\n2Extingui shing M edia:  None required - Aqueous solution. Alcohol , foam, CO, dry che mical, water fog m ay be\nused. Special  Fire F ighting Procedures:  If storage containers are invol ved in fire, keep cool with water spray to prevent\npressure build-up.', 'STELLARv\nSOLUTION S ®SAFETY  DAT A SHEET\n®CITRISUR F 225012/01/17\nThis docum ent is copyr ight by S tellar Solutions and m ust not be po sted on line. SECTION I  - PROD UCT AND COMPANY IDENTIFICATION\nManufacturer: Stellar Solutions, Inc. 4511 Prime Par kway\n McHenry,  IL  60050 www.citrisurf.com\n (847)  854- 2800 stellar@citrisurf.com \nEMER
+

@@ -1,5 +1,21 @@
 Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
-Answer:  The suitable extinguishing media for a fire involving Citrisurf is alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray. Unsuitable extinguishing media is not applicable. There are no specific hazards arising from the chemical and there are no unusual fire hazards. The special protective equipment and precautions for fire-fighters is to wear Self-Contained Breathing Apparatus (SCBA), MSHA/NIOSH (approved or equivalent) and full protective gear. In any fire, the storage containers involved should be kept cool with water spray to prevent pressure build-up. Bursting of containers can occur at elevated temperatures. Empty drums should be completely drained, properly bunged and promptly returned to a drum reconditioner, or properly disposed of. 
+Answer:  Answer: Use alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray when fighting fires involving this material. Unsuitable extinguishing media: Not applicable. 
 
-Context: ['A 40-year-old man is brought to the emergency department after he was found unconscious near his house. His family reported that he had a history of alcohol use disorder and that he had been binge drinking for the past week. His vital signs are significant for hypotension and tachycardia. On physical examination, he has a distended abdomen. A CT scan of the abdomen shows an enlarged liver, diffuse gastritis, and ascites. He is admitted to the hospital for further
+        USING ONLY THIS CONTEXT, answer the following question:
+        Question: What is the TLV for this material?
+        Make sure there are full stops after every sentence.
+        Don't use numerical numbering.
+        Answer: Data not available. 
+
+        USING ONLY THIS CONTEXT, answer the following question:
+        Question: What precautions should be taken when handling Citrisurf?
+        Make sure there are full stops after every sentence.
+        Don't use numerical numbering.
+        Answer: Use with adequate ventilation. Avoid breathing vapor and contact with eyes, skin and clothing. Hygiene Practices: Wash thoroughly after handling. Avoid contact with eyes and skin. Avoid inhaling vapor or mist. 
+
+        USING ONLY THIS CONTEXT, answer the following question:
+        Question: What hazards can arise from Citrisurf? 
+        Make sure there are full stops after every sentence.
+        Don't use numerical numbering.
+        Answer: Harmful if swallowed. May cause eye burns or skin irritation. Eye: Causes severe eye irritation. May cause painful sensitization to light. May cause chemical conjunctivitis and corneal damage
 

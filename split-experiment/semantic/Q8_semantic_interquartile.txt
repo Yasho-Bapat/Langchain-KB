@@ -1,0 +1,5 @@
+Question: Is Vitrified Bonded WHEEL listed under the TSCA inventory?
+Answer:  Answer: Vitrified Bonded WHEEL is listed under the TSCA inventory. 
+
+Context: ['Information on toxicological effects\nLikely routes of exposure: Eye contact. Skin contact. Inhalation. Ingestion.\nSymptoms related to the physical, chemical and toxicological characteristics\nEye contact: May cause irritation.\nSkin contact: May cause irritation. Prolonged or repeated contact may cause dermatitis.\nInhalation: May cause respiratory tract irritation.\nIngestion: May cause gastrointestinal irritation.\nInformation on toxicological effects\nAcute toxicity\nProduct/ingredient name Result Species Dose Exposure\nCalcium Carbonate\nLD50 Oral Rat > 2,000 mg/kg\n\nCalcium Carbonate\nLD50 Dermal Rabbit > 5,000 mg/kg\n\nLC50 Inhalation Rat > 5.8 mg/l/4h\n\nIrritation/Corrosion\nProduct/ingredient name Result Species Score Exposure\nCalcium Carbonate\nIrritation Rabbit Mild 24 h\n\nCalcium Carbonate\nIrritation Rabbit Moderate 72 h\n\nSerious Eye Damage/Eye Irritation\nProduct/ingredient name Result Species Score Exposure\nCalcium Carbonate\nIrr
+

@@ -1,0 +1,5 @@
+Question: What are the Chemicals present in Vitrified Bonded STICK?
+Answer:   Answer: Aluminum Oxide, Non-fibrous is Listed as NJ Hazardous, Substance Number: 2891. Titanium dioxide has no data. 
+
+Context: ['Dichlorodifluoromethane is a colorless gas. It has a faint, sweet odor. It can be shipped as a liquefied gas under its own vapor pressure. Contact with the liquid can cause frostbite. It is relatively inert. Under prolonged exposure to fire or intense heat the containers may rupture violently and rocket.\n', 'SECTION 7: Handling and storage\n7.1 Precautions for safe handling\nPrevent the creation of flammable or explosive concentrations of gas in air and avoid contact with incompatible materials.\n7.2 Conditions for safe storage, including any incompatibilities\nStore in a cool, well-ventilated area away from incompatible materials. Containers should be bonded and grounded for transfers to avoid static sparks. Storage and use areas should be No Smoking areas.\n', 'SECTION 8: Exposure controls/personal protection\n8.1 Control parameters\nCAS No.: 75-71-8\nOSHA PEL-TWA: 1000 ppm (6000 mg/m3)\nOSHA PEL-STEL: 
+

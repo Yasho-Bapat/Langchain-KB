@@ -1,0 +1,13 @@
+Question: What should be done to prevent from causing environmental contamination in the event of a spill?
+Answer:  Answer: Absorb spill with inert material (e.g. dry sand or  earth) then place in a chemical waste container. A void runoff into storm sewers and ditches which lead to waterways. Follow all governm ent regulations. Collect spillage. Keep in suitable, closed containers for disposal. Avoid discharge into drains, water courses or onto the ground. Environmental precautions. See Section 12 for additional ecological information.  ",
+    "question": "What should be done to prevent from causing environmental contamination in the event of a spill?",
+    "answer": "Absorb spill with inert material (e.g. dry sand or  earth) then place in a chemical waste container. A void runoff into storm sewers and ditches which lead to waterways. Follow all governm ent regulations. Collect spillage. Keep in suitable, closed containers for disposal. Avoid discharge into drains, water courses or onto the ground. Environmental precautions. See Section 12 for additional ecological information.  "
+}
+```
+
+### B. Data Fields
+
+- `id`: a `string` feature, the id of example.
+- `context`: a `string` feature, the text of the context paragraph.
+- `question`: a `string` feature, the question of the
+
