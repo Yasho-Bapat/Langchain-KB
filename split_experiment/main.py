@@ -55,7 +55,8 @@ class SplittingTest:
             self.split_docs = splitter.split_documents(self.documents)
             print("recursive split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "semantic":
-            splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
+            # splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
+            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
             self.split_docs = splitter.split_documents(self.documents)
             print("semantic split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "section_aware":
@@ -119,18 +120,19 @@ class SplittingTest:
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
-        # self.load_documents()
-        # self.preprocess_documents()
-        # self.store_documents()
+        self.delete_collection()
+        self.load_documents()
+        self.preprocess_documents()
+        self.store_documents()
 
-        for i, question in enumerate(questions):
-            answer = self.query_documents(question, 8)
-            if self.splitter_name == "semantic":
-                filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
-            else:
-                filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
-            with open(filename, 'w', encoding="utf-8") as f:
-                f.write(f"Question: {question}\nAnswer: {answer}\n\n")
+        # for i, question in enumerate(questions):
+        #     answer = self.query_documents(question, 8)
+        #     if self.splitter_name == "semantic":
+        #         filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
+        #     else:
+        #         filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
+        #     with open(filename, 'w', encoding="utf-8") as f:
+        #         f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
         end = perf_counter()
         print(f"Experiment with {self.splitter_name} completed in {end - start:.2f} seconds")
