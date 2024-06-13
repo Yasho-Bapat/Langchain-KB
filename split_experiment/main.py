@@ -55,7 +55,7 @@ class SplittingTest:
             self.split_docs = splitter.split_documents(self.documents)
             print("recursive split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "semantic":
-            splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=2)
+            splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
             self.split_docs = splitter.split_documents(self.documents)
             print("semantic split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "section_aware":
@@ -97,7 +97,7 @@ class SplittingTest:
         self.db.add_documents(self.split_docs)
         print(f"document stored({splitter})!")
 
-    def delete_collections(self):
+    def delete_collection(self):
         self.db.delete_collection()
         print("collection deleted!")
 
@@ -113,7 +113,7 @@ class SplittingTest:
             + f" Context: {[doc.page_content for doc in docs]}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
-            + " Don't use numerical numbering. Format it well."
+            + " Don't use numerical numbering."
         )
         return result
 
@@ -176,9 +176,9 @@ if __name__ == "__main__":
         "Which chemical is most hazardous for the environment?"
     ]
 
-    # difficulty_level = "easy"
+    difficulty_level = "easy"
     # difficulty_level = "moderate"
-    difficulty_level = "hard"
+    # difficulty_level = "hard"
     # difficulty_level = "all"
 
     questions = {
@@ -204,7 +204,7 @@ if __name__ == "__main__":
         for splitter in splitters:
             test = SplittingTest(splitter)
             test.run_experiment(selected_questions, level=difficulty_level)
-            # test.delete_collections()
+            # test.delete_collection()
 
     print(f"Experiment with {splitters} completed in {perf_counter() - start:.2f} seconds")
 
