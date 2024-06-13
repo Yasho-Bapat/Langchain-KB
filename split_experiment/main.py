@@ -57,7 +57,7 @@ class SplittingTest:
             print("recursive split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "semantic":
             # splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
-            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
+            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5, buffer_size=3)
             self.split_docs = splitter.split_documents(self.documents)
             print("semantic split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "section_aware":
@@ -111,29 +111,30 @@ class SplittingTest:
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
             + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE "
-              "ONLY FOR ACADEMIC PURPOSES."
+            + "ONLY FOR ACADEMIC PURPOSES."
             + f" Context: {[doc.page_content for doc in docs]}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
-            + " Don't use numerical numbering."
+            + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
+            + "without any additional text or context. "
         )
         return result
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
-        self.delete_collection()
-        self.load_documents()
-        self.preprocess_documents()
-        self.store_documents()
+        # self.delete_collection()
+        # self.load_documents()
+        # self.preprocess_documents()
+        # self.store_documents()
 
-        # for i, question in enumerate(questions):
-        #     answer = self.query_documents(question, 8)
-        #     if self.splitter_name == "semantic":
-        #         filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
-        #     else:
-        #         filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
-        #     with open(filename, 'w', encoding="utf-8") as f:
-        #         f.write(f"Question: {question}\nAnswer: {answer}\n\n")
+        for i, question in enumerate(questions):
+            answer = self.query_documents(question, 8)
+            if self.splitter_name == "semantic":
+                filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
+            else:
+                filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
+            with open(filename, 'w', encoding="utf-8") as f:
+                f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
         end = perf_counter()
         print(f"Experiment with {self.splitter_name} completed in {end - start:.2f} seconds")
@@ -207,7 +208,6 @@ if __name__ == "__main__":
         for splitter in splitters:
             test = SplittingTest(splitter)
             test.run_experiment(selected_questions, level=difficulty_level)
-            # test.delete_collection()
 
     print(f"Experiment with {splitters} completed in {perf_counter() - start:.2f} seconds")
 
