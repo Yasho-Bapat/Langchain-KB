@@ -3,7 +3,7 @@ from time import perf_counter
 import dotenv
 import os
 
-from langchain_postgres.vectorstores import PGVector
+from langchain_postgres.vectorstores import PGVector, DistanceStrategy
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
 from langchain_community.embeddings.spacy_embeddings import SpacyEmbeddings
@@ -29,6 +29,7 @@ class SplittingTest:
             collection_name=self.collection_name,
             connection=self.connection,
             use_jsonb=True,
+            distance_strategy=DistanceStrategy.EUCLIDEAN,
         )
         self.documents = []
         self.split_docs = []
@@ -55,7 +56,8 @@ class SplittingTest:
             self.split_docs = splitter.split_documents(self.documents)
             print("recursive split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "semantic":
-            splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=2)
+            # splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
+            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5, buffer_size=3)
             self.split_docs = splitter.split_documents(self.documents)
             print("semantic split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "section_aware":
@@ -97,7 +99,7 @@ class SplittingTest:
         self.db.add_documents(self.split_docs)
         print(f"document stored({splitter})!")
 
-    def delete_collections(self):
+    def delete_collection(self):
         self.db.delete_collection()
         print("collection deleted!")
 
@@ -109,16 +111,18 @@ class SplittingTest:
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
             + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE "
-              "ONLY FOR ACADEMIC PURPOSES."
+            + "ONLY FOR ACADEMIC PURPOSES."
             + f" Context: {[doc.page_content for doc in docs]}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
-            + " Don't use numerical numbering. Format it well."
+            + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
+            + "without any additional text or context. "
         )
         return result
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
+        # self.delete_collection()
         # self.load_documents()
         # self.preprocess_documents()
         # self.store_documents()
@@ -176,9 +180,9 @@ if __name__ == "__main__":
         "Which chemical is most hazardous for the environment?"
     ]
 
-    # difficulty_level = "easy"
+    difficulty_level = "easy"
     # difficulty_level = "moderate"
-    difficulty_level = "hard"
+    # difficulty_level = "hard"
     # difficulty_level = "all"
 
     questions = {
@@ -204,7 +208,6 @@ if __name__ == "__main__":
         for splitter in splitters:
             test = SplittingTest(splitter)
             test.run_experiment(selected_questions, level=difficulty_level)
-            # test.delete_collections()
 
     print(f"Experiment with {splitters} completed in {perf_counter() - start:.2f} seconds")
 
