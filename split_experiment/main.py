@@ -3,7 +3,7 @@ from time import perf_counter
 import dotenv
 import os
 
-from langchain_postgres.vectorstores import PGVector
+from langchain_postgres.vectorstores import PGVector, DistanceStrategy
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
 from langchain_community.embeddings.spacy_embeddings import SpacyEmbeddings
@@ -29,6 +29,7 @@ class SplittingTest:
             collection_name=self.collection_name,
             connection=self.connection,
             use_jsonb=True,
+            distance_strategy=DistanceStrategy.EUCLIDEAN,
         )
         self.documents = []
         self.split_docs = []
