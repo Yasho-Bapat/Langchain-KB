@@ -1,7 +1,0 @@
-Question: What is the recommended action if the Ammonium Hydroxide is accidentally swallowed?
-Answer:  
-
-Answer: IF SWALLOWED: rinse mouth. Do NOT induce vomiting. Dilute with water or milk. Do not induce vomiting. Call a physician if necessary. 
-
-Context: ['Remove contact lenses, if present and easy to do. Continue rinsing. May cause severe irritation with possible permanent damage. Inhalation: Not expected to require first aid. If necessary, remove to fresh air. Skin Contact: IF ON SKIN (or hair): Take off immediately all contaminated clothing. Rinse skin with water. May cause serious damage to the \nskin. Effects may include redness, pain, skin burns. Ingestion: IF SWALLOWED: rinse mouth. Do NOT induce vomiting. Dilute with water or milk. Do not induce vomiting. Call a physician if \nnecessary. 4.2. Most Important Symptoms and Effects, Acute and Delayed\nThis item is corrosive. May be fatal if swallowed or inhaled. Mist and vapor cause burns to every area of contact. Use with adequate ventilation. Avoid \ncontact with skin, eyes or clothing. Wash areas of contact with plenty of water immediately. For eyes, get medical attention. EYE CONTACT: May cause \nsevere irritation with possible permanent damage. SKIN
-

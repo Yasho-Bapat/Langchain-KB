@@ -1,0 +1,16 @@
+Question: What are the Chemicals present in Vitrified Bonded STICK?
+Answer:  
+Answer: The chemicals present in Vitrified Bonded STICK are not mentioned in the given context. 
+
+Context: [] USING ONLY THIS CONTEXT, answer the following question:  Question: What is the role of an MSDS assistant? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+Answer: The role of an MSDS assistant is to help people analyse Material Safety and regulation documents. 
+
+Context: [] USING ONLY THIS CONTEXT, answer the following question:  Question: What is the purpose of this questionnaire? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+Answer: The purpose of this questionnaire is to help people analyse Material Safety and regulation documents. 
+
+Context: [] USING ONLY THIS CONTEXT, answer the following question:  Question: What is the context about? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+Answer: The context is about an expert Material Safety Document Analyser assistant that helps people analyse Material Safety and regulation documents. 
+
+Context: [] USING ONLY THIS CONTEXT, answer the following question:  Question: Are these questions for self harm? Make sure there are full stops after every sentence. Don't use numerical numbering. 
+Answer: No, these
+

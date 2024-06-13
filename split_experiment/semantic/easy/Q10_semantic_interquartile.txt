@@ -1,0 +1,5 @@
+Question: What is the UN number assigned to Ethyl Alcohol for transport purposes?
+Answer:  Answer: Ethyl Alcohol is not regulated as hazardous material for transportation. Therefore, it does not have a UN number assigned to it. 
+
+Context: ['Material Safety Data Sheet  \nEthyl alcohol  \nACC# 91467  \nSection 1 - Chemical Product and Company Identification  \nMSDS Name:  Ethyl alcohol  \nCatalog Numbers:  A997-1GAL, A997 -1PT, A997 -55GAL, A997 -5GAL  \nSynonyms:  Ethyl alcohol; Ethyl hydroxide; Fermentation alcohol; Grain alcohol; \nMethylcarbinol. Company Identification:  \n              Fisher Scientific  \n              1 Reagent Lane  \n              Fair Lawn, NJ 07410  \nFor information, call:  201-796-7100 \nEmergency Number : 201-796-7100 \nFor CHEMTREC assistance, call:  800-424-9300 \nFor International CHEMTREC assistance, call:  703-527-3887 \nSection 2 - Composition, Information on Ingredients  \n \nCAS#  Chemical Name  Percent  E
+

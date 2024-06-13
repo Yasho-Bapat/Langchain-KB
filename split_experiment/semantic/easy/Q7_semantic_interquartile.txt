@@ -1,0 +1,5 @@
+Question: What type of extinguishing media is suitable for a fire involving Citrisurf?
+Answer:  Answer: Alcohol resistant foam, carbon dioxide, dry chemical, or water fog or spray are suitable extinguishing media when fighting fires involving Citrisurf. 
+
+Context: ['SECTION 1: Identification of the substance/mixture and of the company/\nundertaking\n1.1. Product identifier\nProduct name : 2-Propanol\nCAS-No. : 67-63-0\n1.2. Relevant identified uses of the substance or mixture and uses advised\nagainst\nUse of the substance/mixture : Solvent\nFor professional use only.\n1.3. Details of the supplier of the safety data sheet\nManufacturer/Supplier : Shell Chemicals\nEurope BV\nWeena 70\n3012 CM Rotterdam\nThe Netherlands\nPhone : +31 10 497 4500\nFax : +31 10 497 4250\nE-mail address : productstewardship@shell.com\n1.4. Emergency telephone number\nEmergency telephone\n: For emergency responders: For further information: +44 870 6000 888\n(24 hours)\n: +44 20 7934 1234\nSECTION 2: Hazards identification\n2.1. Classification of the substance or mixture\nClassification
+
