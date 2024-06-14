@@ -19,7 +19,7 @@ co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
 
 def rerank_documents(documents, query):
-    results = co.rerank(query=query, documents=documents, top_n=8, model="rerank-multilingual-v2.0",
+    results = co.rerank(query=query, documents=documents, top_n=5, model="rerank-multilingual-v2.0",
                         return_documents=True)
     final_results = [doc["document"]["text"] for doc in results.dict()["results"]]
     return final_results
