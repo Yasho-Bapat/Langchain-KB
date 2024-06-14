@@ -19,7 +19,8 @@ co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
 
 def rerank_documents(documents, query):
-    results = co.rerank(query=query, documents=documents, top_n=10, model="rerank-multilingual-v2.0", return_documents=True)
+    results = co.rerank(query=query, documents=documents, top_n=10, model="rerank-multilingual-v2.0",
+                        return_documents=True)
     final_results = [doc["document"]["text"] for doc in results.dict()["results"]]
     return final_results
 
@@ -104,9 +105,8 @@ class SplittingTest:
 
         filename = f"splits/{self.splitter_name}"
         results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
-        with open(f"{filename}.json", "w") as f:
-            json.dump(results, f, indent=2)
-
+        # with open(f"{filename}.json", "w") as f:
+        #     json.dump(results, f, indent=2)
 
         print(f"preprocessing finished. {len(self.split_docs)} splits created, stored in {filename}.json")
 
@@ -119,20 +119,41 @@ class SplittingTest:
         print("collection deleted!")
 
     def query_documents(self, query, k=20):
+        retrieval_log = {"query": query, "retrieved_documents": [], "reranked_documents": []}
+
         print(f"query: {query}")
         docs = self.db.similarity_search(query, k)
+        retrieval_log["retrieved_documents"] = [doc.__dict__ for doc in docs]
 
         documents = [doc.page_content for doc in docs]
 
         if len(documents) > 0:
-            docs = rerank_documents(documents, query)
+            reranked_docs = rerank_documents(documents, query)
+            retrieval_log["reranked_documents"] = [doc for doc in reranked_docs]
         else:
-            docs = documents
+            retrieval_log["reranked_documents"] = "None"
 
-        filename = f"topk/{self.splitter_name}"
-        results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
-        with open(f"ans.json", "w") as f:
-            json.dump(results, f, indent=2)
+        json_filename = f"{self.splitter_name}.json"
+
+        # Initialize temp to an empty list
+        temp = []
+
+        # Check if the JSON file exists and handle potential JSONDecodeError
+        if os.path.exists(json_filename):
+            try:
+                with open(json_filename, "r") as f:
+                    temp = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Warning: {json_filename} is empty or malformed. Initializing a new list.")
+
+        temp.append(retrieval_log)
+
+        with open(json_filename, "w") as f:
+            json.dump(temp, f, indent=2)
+
+        print("Data stored in JSON successfully.")
+
+
         # code will change for Azure AI llm
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"

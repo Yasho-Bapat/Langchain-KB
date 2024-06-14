@@ -11,7 +11,7 @@ def response_generator(splitter: str, query: str):
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
-    yield "\nTOP 3 DOCUMENTS RETRIEVED: \n"
+    yield "\n\nTOP 3 DOCUMENTS RETRIEVED: \n\n"
 
     for document in topk:
         yield document + "\n\n"
