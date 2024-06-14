@@ -14,7 +14,7 @@ def response_generator(splitter: str, query: str):
     yield "\nTOP 3 DOCUMENTS RETRIEVED: \n"
 
     for document in topk:
-        yield document + "\n" + "\t" + str(document.metadata) + "\n\n\n"
+        yield document + "\n\n"
         time.sleep(0.05)
 
     print(topk)
