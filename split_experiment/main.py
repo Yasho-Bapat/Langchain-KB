@@ -164,7 +164,7 @@ class SplittingTest:
             + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
             + "without any additional text or context. "
         )
-        return [result, docs[:3]]
+        return [result, reranked_docs[:3]]
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
