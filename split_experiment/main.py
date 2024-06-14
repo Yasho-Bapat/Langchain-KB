@@ -118,7 +118,7 @@ class SplittingTest:
         self.db.delete_collection()
         print("collection deleted!")
 
-    def query_documents(self, query, k=20):
+    def query_documents(self, query, k=20, save_results: bool=False):
         retrieval_log = {"query": query, "retrieved_documents": [], "reranked_documents": []}
 
         print(f"query: {query}")
@@ -138,20 +138,20 @@ class SplittingTest:
         # Initialize temp to an empty list
         temp = []
 
-        # Check if the JSON file exists and handle potential JSONDecodeError
-        if os.path.exists(json_filename):
-            try:
-                with open(json_filename, "r") as f:
-                    temp = json.load(f)
-            except json.JSONDecodeError:
-                print(f"Warning: {json_filename} is empty or malformed. Initializing a new list.")
+        if save_results:
+            if os.path.exists(json_filename):
+                try:
+                    with open(json_filename, "r") as f:
+                        temp = json.load(f)
+                except json.JSONDecodeError:
+                    print(f"Warning: {json_filename} is empty or malformed. Initializing a new list.")
 
-        temp.append(retrieval_log)
+            temp.append(retrieval_log)
 
-        with open(json_filename, "w") as f:
-            json.dump(temp, f, indent=2)
+            with open(json_filename, "w") as f:
+                json.dump(temp, f, indent=2)
 
-        print("Data stored in JSON successfully.")
+            print("Data stored in JSON successfully.")
 
 
         # code will change for Azure AI llm
