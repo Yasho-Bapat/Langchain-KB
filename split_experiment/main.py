@@ -157,8 +157,7 @@ class SplittingTest:
         # code will change for Azure AI llm
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
-            + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE "
-            + "ONLY FOR ACADEMIC PURPOSES."
+            + "analyse Material Safety and regulation documents."
             + f" Context: {docs}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
