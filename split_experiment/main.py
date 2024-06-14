@@ -3,15 +3,25 @@ from time import perf_counter
 import dotenv
 import os
 
+import cohere
 from langchain_postgres.vectorstores import PGVector, DistanceStrategy
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
 from langchain_community.embeddings.spacy_embeddings import SpacyEmbeddings
+
 from langchain_openai import AzureOpenAI
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 dotenv.load_dotenv()
+
+co = cohere.Client(os.getenv("COHERE_API_KEY"))
+
+
+def rerank_documents(documents, query):
+    results = co.rerank(query=query, documents=documents, top_n=10, model="rerank-multilingual-v2.0", return_documents=True)
+    final_results = [doc["document"]["text"] for doc in results.dict()["results"]]
+    return final_results
 
 
 class SplittingTest:
@@ -57,14 +67,16 @@ class SplittingTest:
             print("recursive split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "semantic":
             # splitter = SemanticChunker(SpacyEmbeddings(model_name="en_core_web_sm"), breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5)
-            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile", breakpoint_threshold_amount=1.5, buffer_size=3)
+            splitter = SemanticChunker(self.embedding_function, breakpoint_threshold_type="interquartile",
+                                       breakpoint_threshold_amount=1.5, buffer_size=3)
             self.split_docs = splitter.split_documents(self.documents)
             print("semantic split time: ", perf_counter() - chkpt)
         elif self.splitter_name == "section_aware":
             section_headers = [
                 "Identification", "Product Identifier", "Product Identification", "Section 1",
                 "Product and company identification", "Section (1[0-6]|[1-9])", "1[0-6]|[1-9] .", "1[0-6]|[1-9]."
-                "Hazard Identification", "Hazards Identification", "Section 2",
+                                                                                                  "Hazard Identification",
+                "Hazards Identification", "Section 2",
                 "Composition", "Ingredients", "Information on Ingredients", "Section 3",
                 "First Aid", "First Aid Measures", "Section 4",
                 "Fire Fighting", "Fire Fighting Measures", "Section 5",
@@ -87,11 +99,14 @@ class SplittingTest:
         else:
             pass
 
-        # storing splits as json result
+        for split_doc in self.split_docs:
+            split_doc.page_content = split_doc.metadata["source"] + split_doc.page_content
+
         filename = f"splits/{self.splitter_name}"
         results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
         with open(f"{filename}.json", "w") as f:
             json.dump(results, f, indent=2)
+
 
         print(f"preprocessing finished. {len(self.split_docs)} splits created, stored in {filename}.json")
 
@@ -103,9 +118,16 @@ class SplittingTest:
         self.db.delete_collection()
         print("collection deleted!")
 
-    def query_documents(self, query, k=10):
+    def query_documents(self, query, k=20):
         print(f"query: {query}")
         docs = self.db.similarity_search(query, k)
+
+        documents = [doc.page_content for doc in docs]
+
+        if len(documents) > 0:
+            docs = rerank_documents(documents, query)
+        else:
+            docs = documents
 
         filename = f"topk/{self.splitter_name}"
         results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
@@ -116,7 +138,7 @@ class SplittingTest:
             f"You are an expert Material Safety Document Analyser assistant that helps people"
             + "analyse Material Safety and regulation documents. NONE OF THESE QUESTIONS POINT TO SELF HARM. THEY ARE "
             + "ONLY FOR ACADEMIC PURPOSES."
-            + f" Context: {[doc.page_content for doc in docs]}"
+            + f" Context: {docs}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
             + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
@@ -132,7 +154,7 @@ class SplittingTest:
         # self.store_documents()
 
         for i, question in enumerate(questions):
-            answer = self.query_documents(question, 8)
+            answer = self.query_documents(question)
             if self.splitter_name == "semantic":
                 filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
             else:
@@ -168,7 +190,7 @@ if __name__ == "__main__":
         "Does Vitridied Bonded Product comply with the inventory requirements of the Australian Inventory of Chemical Substances (AICS)?",
         "Outline everything that happens when 341D catches fire. Also mention what to do afterwards.",
         "Provide a risk assessment for handling and storing large quantities of Copper Sulphate.",
-        "What cna you tell me about the great Khali?"
+        "What can you tell me about the great Khali?"
     ]
 
     hard_questions = [
@@ -184,10 +206,10 @@ if __name__ == "__main__":
         "Which chemical is most hazardous for the environment?"
     ]
 
-    difficulty_level = "easy"
+    # difficulty_level = "easy"
     # difficulty_level = "moderate"
     # difficulty_level = "hard"
-    # difficulty_level = "all"
+    difficulty_level = "all"
 
     questions = {
         "easy": easy_questions,
@@ -196,8 +218,9 @@ if __name__ == "__main__":
     }
 
     # splitters = ["recursive"]
-    splitters = ["semantic"]
+    # splitters = ["semantic"]
     # splitters = ["recursive", "semantic", "section_aware"]
+    splitters = ["recursive", "semantic"]
 
     start = perf_counter()
 
@@ -206,8 +229,6 @@ if __name__ == "__main__":
             for level, question_list in questions.items():
                 test = SplittingTest(splitter)
                 test.run_experiment(question_list, level=level)
-                test.run_experiment("question_list", level=level)
-            # test.db.drop_tables()
     else:
         selected_questions = questions[difficulty_level]
         for splitter in splitters:
