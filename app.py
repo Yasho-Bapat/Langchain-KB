@@ -6,11 +6,18 @@ from split_experiment.main import SplittingTest
 
 def response_generator(splitter: str, query: str):
     test = SplittingTest(splitter)
-    response = test.query_documents(query)
+    response, topk = test.query_documents(query)
 
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
+    yield "\nTOP 3 DOCUMENTS RETRIEVED: \n"
+
+    for document in topk:
+        yield document.page_content + "\n\n"
+        time.sleep(0.05)
+
+    print(topk)
 
 
 st.set_page_config(layout="wide", page_title="Chunking Demo")

@@ -107,6 +107,10 @@ class SplittingTest:
         print(f"query: {query}")
         docs = self.db.similarity_search(query, k)
 
+        filename = f"topk/{self.splitter_name}"
+        results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
+        with open(f"ans.json", "w") as f:
+            json.dump(results, f, indent=2)
         # code will change for Azure AI llm
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
@@ -118,7 +122,7 @@ class SplittingTest:
             + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
             + "without any additional text or context. "
         )
-        return result
+        return [result, docs[:3]]
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
@@ -202,6 +206,7 @@ if __name__ == "__main__":
             for level, question_list in questions.items():
                 test = SplittingTest(splitter)
                 test.run_experiment(question_list, level=level)
+                test.run_experiment("question_list", level=level)
             # test.db.drop_tables()
     else:
         selected_questions = questions[difficulty_level]
