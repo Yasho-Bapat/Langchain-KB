@@ -6,7 +6,7 @@ import os
 from langchain_postgres.vectorstores import PGVector, DistanceStrategy
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai.embeddings import AzureOpenAIEmbeddings
-from langchain_community.embeddings.spacy_embeddings import SpacyEmbeddings
+from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
 from langchain_openai import AzureOpenAI
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -89,7 +89,7 @@ class SplittingTest:
 
         # storing splits as json result
         filename = f"splits/{self.splitter_name}"
-        results = [{"text": d.page_content, "metadata": d.metadata} for d in self.split_docs]
+        results = [{"text": d.page_content, "metadata": d.metadata, "id": id} for id, d in enumerate(self.split_docs)]
         with open(f"{filename}.json", "w") as f:
             json.dump(results, f, indent=2)
 
@@ -126,19 +126,19 @@ class SplittingTest:
 
     def run_experiment(self, questions, level: str = "easy"):
         start = perf_counter()
-        # self.delete_collection()
+        self.delete_collection()
         # self.load_documents()
         # self.preprocess_documents()
         # self.store_documents()
 
-        for i, question in enumerate(questions):
-            answer = self.query_documents(question, 8)
-            if self.splitter_name == "semantic":
-                filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
-            else:
-                filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
-            with open(filename, 'w', encoding="utf-8") as f:
-                f.write(f"Question: {question}\nAnswer: {answer}\n\n")
+        # for i, question in enumerate(questions):
+        #     answer = self.query_documents(question, 8)
+        #     if self.splitter_name == "semantic":
+        #         filename = f"{self.splitter_name}/{level}/Q{i + 1}_{self.splitter_name}_interquartile.txt"
+        #     else:
+        #         filename = f"{self.splitter_name}/{level}/Q{i+1}_{self.splitter_name}.txt"
+        #     with open(filename, 'w', encoding="utf-8") as f:
+        #         f.write(f"Question: {question}\nAnswer: {answer}\n\n")
 
         end = perf_counter()
         print(f"Experiment with {self.splitter_name} completed in {end - start:.2f} seconds")
@@ -196,7 +196,7 @@ if __name__ == "__main__":
     }
 
     # splitters = ["recursive"]
-    splitters = ["semantic"]
+    splitters = ["semantic", "recursive"]
     # splitters = ["recursive", "semantic", "section_aware"]
 
     start = perf_counter()
