@@ -19,7 +19,7 @@ co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
 
 def rerank_documents(documents, query):
-    results = co.rerank(query=query, documents=documents, top_n=5, model="rerank-multilingual-v2.0",
+    results = co.rerank(query=query, documents=documents, top_n=8, model="rerank-multilingual-v2.0",
                         return_documents=True)
     final_results = [doc["document"]["text"] for doc in results.dict()["results"]]
     return final_results
@@ -158,7 +158,7 @@ class SplittingTest:
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser assistant that helps people"
             + "analyse Material Safety and regulation documents."
-            + f" Context: {docs}"
+            + f" Context: {reranked_docs}"
             + " USING ONLY THIS CONTEXT, answer the following question: "
             + f" Question: {query}. Make sure there are full stops after every sentence."
             + "Don't use numerical numbering. Just return one answer (can be descriptive depending upon the question) "
