@@ -1,5 +1,3 @@
-# auth.py
-
 from __future__ import print_function
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
