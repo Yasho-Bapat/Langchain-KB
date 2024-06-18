@@ -74,6 +74,7 @@ dataextract_chain = prompt | dataextract_model | parser
 file_path = "../docs/1.1 SDS Havaklean KP.PDF"
 loader = PyPDFLoader(file_path)
 documents = loader.load()
+print(" ".join([document.page_content for document in documents]))
 print(f"Loaded {len(documents)} documents from {file_path}")
 #print(documents[2].page_content)
 
