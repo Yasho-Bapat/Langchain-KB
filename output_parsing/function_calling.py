@@ -42,9 +42,8 @@ prompt = ChatPromptTemplate.from_messages([
 llm = AzureChatOpenAI(
     deployment_name=deployment_name,
     model_name=model_name,
-    temperature=0.2,
+    temperature=0,
     max_tokens=800,
-    model_kwargs={"seed": 1001, "top_p": 0.95}
 )
 
 dataextract_function = [
@@ -61,6 +60,7 @@ dataextract_chain = prompt | dataextract_model
 file_path = "../docs/8.1 SDS COPPER SULFATE.pdf"
 loader = PyPDFLoader(file_path)
 documents = loader.load()
+print(" ".join([document.page_content for document in documents]))
 print(f"Loaded {len(documents)} documents from {file_path}")
 
 result = dataextract_chain.invoke({"input": documents[0].page_content})
