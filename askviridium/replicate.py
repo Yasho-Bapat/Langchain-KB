@@ -1,3 +1,4 @@
+import json
 import os
 from typing import List
 import dotenv
@@ -11,8 +12,10 @@ from langchain_core.output_parsers.openai_functions import JsonOutputFunctionsPa
 dotenv.load_dotenv()
 
 os.environ["OPENAI_API_VERSION"] = "2024-02-01"
-model_name = 'gpt-3.5-turbo'
-deployment_name = "langchain-splitting-test"
+# model_name = 'gpt-3.5-turbo'
+# deployment_name = "langchain-splitting-test"
+model_name = 'gpt-4o'
+deployment_name = "langchain-askvai-test-4o"
 # Structure of the desired output. This is passed to the LLM as an instruction on how to return the response to query.
 class MaterialInfo(BaseModel):
     """Information to extract."""
@@ -57,16 +60,21 @@ parser = JsonOutputFunctionsParser()
 #     ("system", template),
 #     ("human", "Material Name: {material}, Manufactured by {manufacturer}, used as {work_content}."),
 # ])
-prompt = ChatPromptTemplate.from_messages([
+prompt_s = ChatPromptTemplate.from_messages([
     ("system", template),
     ("human", "Material Name: {material}"),
 ])
 
+prompt_c = ChatPromptTemplate.from_messages([
+    ("system", template),
+    ("human", "Material Name: {material}, manufactured by {manufacturer}, used as {usecase}"),
+])
 llm = AzureChatOpenAI(
     deployment_name=deployment_name,
-    model_name=model_name,
+    #model_name=model_name,
     temperature=0,
     max_tokens=800,
+    n=2
 )
 
 # convert MaterialInfo into an OpenAI function to use for function calling.
@@ -75,21 +83,28 @@ aoai_function = [
 ]
 
 # binding the function to our LLM to enable function calling.
-model = llm.bind(
+model = llm.bind_functions(
     functions=aoai_function,
-    function_call={"name": "DataExtract"}
+    function_call={"name": "MaterialInfo"}
 )
 
 # creating the chain prompt -> LLM -> JSONOutputParser
-chain = prompt | model | parser
+chain_s = prompt_s | model | parser # simple chain
+chain_c = prompt_c | model | parser # compound chain
 
-material = 'Resin Bonded WHEEL 69078666546'
-manufacturer = 'Master Fluid Solutions'
+material = "Blasocut 4000"
+manufacturer = "Blaser Swisslube, Inc."
 work_content = 'Coolant'
 
-# result = dataextract_chain.invoke({"material": material, "manufacturer": manufacturer, "work_content":work_content, "example": example})
+result_c = chain_c.invoke({"material": material, "manufacturer": manufacturer, "usecase":work_content, "example": example})
 
 # call the LLM, and send material information and our example. {example} is a field in the template.
-result = chain.invoke({"material": material, "example": example})
+result_s = chain_s.invoke({"material": material, "example": example})
+with open ("simple.json", 'w') as file:
+    json.dump(result_s, file)
 
-print(result)
+with open("compound.json", 'w') as file:
+    json.dump(result_c, file)
+
+print(result_c)
+print(result_s)
