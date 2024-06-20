@@ -9,7 +9,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_postgres.vectorstores import PGVector, DistanceStrategy
-from sheets.sheets import Spreadsheet
+from .sheets.sheets import Spreadsheet
 
 dotenv.load_dotenv()
 
@@ -188,8 +188,8 @@ if __name__ == "__main__":
         ],
     }
 
-    difficulty_level = "all"  # "easy", "moderate", "hard" or "all"
-    splitters = ["recursive", "semantic"]  # "recursive", "semantic", "section_aware"
+    difficulty_level = "easy"  # "easy", "moderate", "hard" or "all"
+    splitters = ["recursive"]  # "recursive", "semantic", "section_aware"
 
     start = perf_counter()
 
