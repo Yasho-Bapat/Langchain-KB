@@ -125,9 +125,9 @@ chain_cheminfo = prompt | cheminfo_model | parser
 chain_s = prompt_s | analysis_model | parser # simple chain
 chain_c = prompt_c | analysis_model | parser # compound chain
 
-material = "Blasocut 4000"
-manufacturer = "Blaser Swisslube, Inc."
-work_content = 'Coolant'
+material = "Nitrogen, Cryogenic Liquid"
+manufacturer = "Matheson Tri-Gas, Inc."
+work_content = "Heat Treatment, Hipping, Annealing and Tempering"
 
 chemical_composition = chain_cheminfo.invoke({"material": material, "example": chemical_composition_example})
 
@@ -153,4 +153,3 @@ print(result_s)
 print()
 print("COMPOUND")
 print(result_c)
-
