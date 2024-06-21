@@ -4,7 +4,7 @@ from askviridium.app.modules.ask_viridium_ai.routes import MainRoutes
 
 load_dotenv()
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect, url_for
 from flask_cors import CORS
 from apispec import APISpec
 from flask_swagger_ui import get_swaggerui_blueprint
@@ -45,6 +45,11 @@ swaggerui_blueprint = get_swaggerui_blueprint(
 )
 
 app.register_blueprint(swaggerui_blueprint, url_prefix=swagger_endpoint)
+
+
+@app.route('/')
+def root():
+    return redirect(global_constants.api_version)
 
 
 @app.route(global_constants.api_swagger_json)
