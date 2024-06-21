@@ -141,6 +141,46 @@ test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypo
 trio = ["trio (>=0.23)"]
 
 [[package]]
+name = "apispec"
+version = "6.6.1"
+description = "A pluggable API specification generator. Currently supports the OpenAPI Specification (f.k.a. the Swagger specification)."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "apispec-6.6.1-py3-none-any.whl", hash = "sha256:6460315cb38ac6a2ff42d9e2b8dc0435c37d4428d3abeda96ff97b5dc8eb6b94"},
+    {file = "apispec-6.6.1.tar.gz", hash = "sha256:f5caa47cee75fe03b9c50b5594048b4c052eeca2c212e0dac12dbb6175d9a659"},
+]
+
+[package.dependencies]
+packaging = ">=21.3"
+PyYAML = {version = ">=3.10", optional = true, markers = "extra == \"yaml\""}
+
+[package.extras]
+dev = ["apispec[tests]", "pre-commit (>=3.5,<4.0)", "tox"]
+docs = ["apispec[marshmallow]", "pyyaml (==6.0.1)", "sphinx (==7.3.7)", "sphinx-issues (==4.1.0)", "sphinx-rtd-theme (==2.0.0)"]
+marshmallow = ["marshmallow (>=3.18.0)"]
+tests = ["apispec[marshmallow,yaml]", "openapi-spec-validator (==0.7.1)", "pytest"]
+yaml = ["PyYAML (>=3.10)"]
+
+[[package]]
+name = "apispec-webframeworks"
+version = "1.1.0"
+description = "Web framework plugins for apispec."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "apispec_webframeworks-1.1.0-py3-none-any.whl", hash = "sha256:93e7921426dbafe311d0e9dd912b6dd2e09222e153446a1a73f4c06164107582"},
+    {file = "apispec_webframeworks-1.1.0.tar.gz", hash = "sha256:b095df4afb3d773bdf60f0a599b808fd2ca316a8e452f8ce23b10b4cb0e717bf"},
+]
+
+[package.dependencies]
+apispec = {version = ">=6.0.0", extras = ["yaml"]}
+
+[package.extras]
+dev = ["apispec-webframeworks[tests]", "pre-commit (>=3.5,<4.0)", "tox"]
+tests = ["Flask (>=2.3.3)", "aiohttp (>=3.9.3)", "bottle (>=0.12.25)", "pytest", "tornado (>=6)"]
+
+[[package]]
 name = "attrs"
 version = "23.2.0"
 description = "Classes Without Boilerplate"
@@ -873,13 +913,13 @@ files = [
 
 [[package]]
 name = "marshmallow"
-version = "3.21.3"
+version = "3.21.2"
 description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "marshmallow-3.21.3-py3-none-any.whl", hash = "sha256:86ce7fb914aa865001a4b2092c4c2872d13bc347f3d42673272cabfdbad386f1"},
-    {file = "marshmallow-3.21.3.tar.gz", hash = "sha256:4f57c5e050a54d66361e826f94fba213eb10b67b2fdb02c3e0343ce207ba1662"},
+    {file = "marshmallow-3.21.2-py3-none-any.whl", hash = "sha256:70b54a6282f4704d12c0a41599682c5c5450e843b9ec406308653b47c59648a1"},
+    {file = "marshmallow-3.21.2.tar.gz", hash = "sha256:82408deadd8b33d56338d2182d455db632c6313aa2af61916672146bb32edc56"},
 ]
 
 [package.dependencies]
@@ -1778,4 +1818,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "802aa22d99717cd2892fff9861bfe8bce75b74f4931db6fc87b71a1dd8ba3c00"
+content-hash = "bf7848b4439c2357b21a225f26f2e206f0681c535c62b46e85b59ee6aa1cd5c8"
