@@ -14,6 +14,7 @@ class DotAccessDict(dict):
             )
 
 
+
 class GlobalConstants(DotAccessDict):
     api_version = "/v1"
     utf_8 = "utf-8"
