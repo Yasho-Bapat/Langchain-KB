@@ -100,3 +100,27 @@ class GlobalConstants(DotAccessDict):
     }
 
     api_response_messages = DotAccessDict(api_response_messages)
+
+    chemical_composition_example = {
+        "product_name": "TRIM TC 184B",
+        "chemicals": [{"name": "Severely Hydrotreated Petroleum Oil", "cas_no": "64742-65-0",
+                       "source": "https://www1.mscdirect.com/MSDS/MSDS00007/01790583-20110708.PDF"}],
+        "confidence": 0.85
+    }
+
+    analysis_example = {
+        "analyzed_material": "0652-W Nylon/ 30655-W nylon with CPT Sealant",
+        "composition": "Nylon, CPT Sealant",
+        "analysis_method": "Literature review, trade name association",
+        "decision": "PFAS (No)",
+        "confidence_score": 0.90,
+        "primary_reason": "Nylon is a polymer that does not contain PFAS. CPT Sealant does not typically contain PFAS based on available information.",
+        "secondary_reason": None,
+        "evidence": ["Trade name association with nylon, which is a non-PFAS material",
+                     "Lack of information suggesting PFAS presence in CPT Sealant"],
+        "health_problems": ["Could lead to asphyxia", "Linked to cancer"],
+        "confidence_level": "High",
+        "recommendation": "No further investigation is needed as the analyzed materials are not expected to contain PFAS.",
+        "suggestion": None,
+        "limitations_and_uncertainties": None
+    }
