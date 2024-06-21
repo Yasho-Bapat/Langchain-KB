@@ -59,7 +59,7 @@ class GlobalConstants(DotAccessDict):
     rest_api_methods = DotAccessDict(rest_api_methods)
 
     apispec_config = {
-        "title": "Keyword Analysis API",
+        "title": "Ask Viridium AI",
         "version": "1.0.0",
         "openapi_version": "3.0.2",
     }
@@ -81,3 +81,22 @@ class GlobalConstants(DotAccessDict):
         "rate_limit_exceeded": 429,
     }
     api_status_codes = DotAccessDict(api_status_codes)
+
+    api_response_messages = {
+        "success": "Success",
+        "accepted": "Accepted",
+        "invalid_request_data": "Invalid request data",
+        "unauthorized": "Unauthorized access",
+        "forbidden": "Forbidden access",
+        "not_found": "Resource not found",
+        "global_keywords_not_configured": "Global keywords not configured",
+        "method_not_allowed": "Method not allowed for the requested resource",
+        "conflict": "Conflict with current state of the resource",
+        "internal_server_error": "Internal server error occurred",
+        "service_unavailable": "Service temporarily unavailable",
+        "server_is_running": "Ask Viridium AI Service is running",
+        "missing_required_parameters": "Missing required parameters",
+        "error_while_processing_file": "Error while processing file",
+    }
+
+    api_response_messages = DotAccessDict(api_response_messages)

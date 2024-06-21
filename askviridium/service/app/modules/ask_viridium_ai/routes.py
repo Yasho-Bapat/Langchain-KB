@@ -43,7 +43,6 @@ class MainRoutes:
         return True, None
 
     def home(self):
-        print("ok")
         return render_template("pages/index.html")
 
     def ask_viridium_ai(self):
