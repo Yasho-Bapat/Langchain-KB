@@ -1,4 +1,7 @@
 import os
+import dotenv
+
+dotenv.load_dotenv()
 
 
 class DotAccessDict(dict):
@@ -124,3 +127,6 @@ class GlobalConstants(DotAccessDict):
         "suggestion": None,
         "limitations_and_uncertainties": None
     }
+
+    model_name = os.getenv("AZURE_MODEL_NAME")
+    deployment_name = os.getenv("AZURE_DEPLOYMENT_NAME")

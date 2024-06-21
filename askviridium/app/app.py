@@ -1,20 +1,17 @@
 from dotenv import load_dotenv
 
-from askviridium.service.app.modules.ask_viridium_ai.routes import MainRoutes
-from askviridium.service.app.utils.exceptions import MaxProcessingTimeExceededException
+from askviridium.app.modules.ask_viridium_ai.routes import MainRoutes
 
 load_dotenv()
 
-import json
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from flask_cors import CORS
 from apispec import APISpec
 from flask_swagger_ui import get_swaggerui_blueprint
 from apispec.ext.marshmallow import MarshmallowPlugin
 from apispec_webframeworks.flask import FlaskPlugin
 
-from askviridium.service.app.global_constants import GlobalConstants
-import utils.threading_tools as threading_tool
+from askviridium.app.global_constants import GlobalConstants
 
 global_constants = GlobalConstants
 

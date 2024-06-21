@@ -120,7 +120,7 @@ llm = AzureChatOpenAI(
     max_tokens=800,
 )
 
-with open('system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
+with open('../app/modules/ask_viridium_ai/system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
     chemical_template = file.read()
 
 chemical_prompt = ChatPromptTemplate.from_messages([
@@ -139,7 +139,7 @@ chemical_model = llm.bind(
 
 chemical_chain = chemical_prompt | chemical_model | parser
 
-with open('system_prompt_templates/prompt_using_gemini.txt', 'r') as file:
+with open('../app/modules/ask_viridium_ai/system_prompt_templates/prompt_using_gemini.txt', 'r') as file:
     analysis_template = file.read()
 
 # Define the prompt template

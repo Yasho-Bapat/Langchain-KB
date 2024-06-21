@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify, request, render_template
+from flask import Blueprint, jsonify, render_template
 
-from askviridium.service.app.global_constants import GlobalConstants
+from askviridium.app.global_constants import GlobalConstants
 
 
 class MainRoutes:
