@@ -1,13 +1,19 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 
 from askviridium.service.app.global_constants import GlobalConstants
 
 
 class MainRoutes:
     def __init__(self):
-        self.blueprint = Blueprint("main_routes", __name__)
+        self.blueprint = Blueprint("main_routes", __name__, template_folder="templates", static_folder="static")
         # self.logger = logger
         self.global_constants = GlobalConstants
+
+        self.blueprint.add_url_rule(
+            "/",
+            view_func=self.home,
+            methods=[self.global_constants.rest_api_methods.get_api],
+        )
 
         self.blueprint.add_url_rule(
             "/ask-viridium-ai",
@@ -16,7 +22,6 @@ class MainRoutes:
         )
 
         self.blueprint.add_url_rule("/health", view_func=self.health_check)
-
 
     def return_api_response(self, status, message, result=None, additional_data=None):
         response_data = {
@@ -37,6 +42,10 @@ class MainRoutes:
             return False, missing_params
         return True, None
 
+    def home(self):
+        print("ok")
+        return render_template("pages/index.html")
+
     def ask_viridium_ai(self):
         return "Hello World!"
 
@@ -53,4 +62,3 @@ class MainRoutes:
             self.global_constants.api_status_codes.ok,
             self.global_constants.api_response_messages.server_is_running,
         )
-

@@ -35,6 +35,7 @@ spec = APISpec(
 
 with app.test_request_context():
     for view in [
+        main_routes.home,
         main_routes.ask_viridium_ai,
         main_routes.health_check,
     ]:
@@ -63,8 +64,7 @@ def log_request_info():
 @app.after_request
 def log_response_info(response):
     # logger.info(f"API RESPONSE : {response.status}")
-    # return response
-    pass
+    return response
 
 
 # Create 20 threads to process waiting api calls

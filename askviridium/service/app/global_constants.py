@@ -16,10 +16,11 @@ class GlobalConstants(DotAccessDict):
     utf_8 = "utf-8"
 
     flask_host = "0.0.0.0"
+    flask_app_port = os.getenv("WEBSITES_PORT", 8000)
     u = "u"
     no_of_threads = int(os.getenv("NoOfThreads", 20))
     api_swagger_json = "/api/swagger.json"
-    swagger_app_name = "Keyword Analysis API"
+    swagger_app_name = "Ask Viridium AI"
     swagger_endpoint = os.getenv("SwaggerEndpoint", "/api/docs")
 
     azure_deployment_name = "AZURE_CLIENT_SECRET"

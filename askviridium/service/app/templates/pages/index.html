@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask AI Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
 </head>
 <body>
-
+    <div class="chat-window">
+        <div class="filename-display">Material: Some Material</div>
+        <div class="ask-button-container">
+            <button class="ask-button">Ask AI</button>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" placeholder="Type your message...">
+            <button class="send-button">Send</button>
+        </div>
+    </div>
 </body>
 </html>
