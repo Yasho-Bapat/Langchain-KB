@@ -5,16 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ask AI Service</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+    <script src="{{ url_for('static', filename='/scripts/index.js') }}"></script>
 </head>
 <body>
-    <div class="chat-window">
-        <div class="filename-display">Material: Some Material</div>
-        <div class="ask-button-container">
-            <button class="ask-button">Ask AI</button>
+    <div class="container">
+        <div class="sidebar">
+            <div class="input-card">
+                <h2>Ask ViridiumAI<span class="material-name"></span></h2>
+                <h3>Material Information</h3>
+                <div class="input-data">
+                    <label for="material_name">Material Name:</label>
+                    <input type="text" id="material_name" class="material-name-input" placeholder="Type Material Name...">
+                    <label for="manufacturer">Manufacturer:</label>
+                    <input type="text" id="manufacturer" class="manufacturer-input" placeholder="Type Manufacturer...">
+                    <label for="work_content">Work Content:</label>
+                    <input type="text" id="work_content" class="work-content-input" placeholder="Type Work Content...">
+                </div>
+                <div class="ask-button-container">
+                    <button class="ask-button">Ask AI</button>
+                </div>
+            </div>
         </div>
-        <div class="chat-input-container">
-            <input type="text" class="chat-input" placeholder="Type your message...">
-            <button class="send-button">Send</button>
+        <div class="main-content">
+            <div class="chat-window">
+                <h3>Chat Window</h3>
+                <div class="chat-messages"></div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" placeholder="Type your message...">
+                    <button class="send-button">Send</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

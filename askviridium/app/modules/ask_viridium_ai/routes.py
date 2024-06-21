@@ -1,6 +1,8 @@
-from flask import Blueprint, jsonify, render_template
+from flask import Blueprint, jsonify, render_template, request
 
 from askviridium.app.global_constants import GlobalConstants
+from askviridium.app.modules.ask_viridium_ai.ask_viridium_ai import AskViridium
+from askviridium.app.modules.ask_viridium_ai.constants import AskViridiumConstants
 
 
 class MainRoutes:
@@ -8,6 +10,7 @@ class MainRoutes:
         self.blueprint = Blueprint("main_routes", __name__, template_folder="templates", static_folder="static")
         # self.logger = logger
         self.global_constants = GlobalConstants
+        self.constants = AskViridiumConstants
 
         self.blueprint.add_url_rule(
             "/",
@@ -46,7 +49,30 @@ class MainRoutes:
         return render_template("pages/index.html")
 
     def ask_viridium_ai(self):
-        return "Hello World!"
+        request_data = request.get_json()
+        print(request_data)
+        required_params = [
+            self.constants.input_parameters["material_name"],
+        ]
+
+        valid_request, missing_params = self.validate_request_data(
+            request_data, required_params
+        )
+        if not valid_request:
+            return self.return_api_response(
+                self.global_constants.api_status_codes.bad_request,
+                self.global_constants.api_response_messages.missing_required_parameters,
+                f"{self.global_constants.api_response_parameters.missing_parameters}: {missing_params}",
+            )
+
+        ask_vai = AskViridium()
+        ask_vai.query(request_data[self.constants.input_parameters["material_name"]], request_data[self.constants.input_parameters["manufacturer_name"]], request_data[self.constants.input_parameters["work_content"]])
+
+        return self.return_api_response(
+            self.global_constants.api_status_codes.ok,
+            self.global_constants.api_response_messages.success,
+            ask_vai.result,
+        )
 
     def health_check(self):
         """

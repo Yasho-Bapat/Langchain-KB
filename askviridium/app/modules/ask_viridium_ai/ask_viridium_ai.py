@@ -11,6 +11,7 @@ from askviridium.app.models import ChemicalComposition, MaterialInfo
 
 dotenv.load_dotenv()
 
+
 class AskViridium:
     def __init__(self):
         self.constants = GlobalConstants()
@@ -46,7 +47,7 @@ class AskViridium:
         return prompt
 
     def prompt2_init(self):
-        with open('system_prompt_templates/newprompt.txt', 'r') as file:
+        with open('modules/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
             analysis_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([
