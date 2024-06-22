@@ -1,19 +1,25 @@
 import dotenv
 import json
+from typing import Optional
+import time
 
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain_openai import AzureChatOpenAI
 from langchain_core.output_parsers.openai_functions import JsonOutputFunctionsParser
+from langchain_community.callbacks import get_openai_callback
 
 from askviridium.app.global_constants import GlobalConstants
 from askviridium.app.models import ChemicalComposition, MaterialInfo
+from tracking import Logger
 
 dotenv.load_dotenv()
 
 
 class AskViridium:
     def __init__(self):
+        self.logger = Logger
+        self.loginfo = dict()
         self.constants = GlobalConstants()
         self.model_name = self.constants.model_name
         self.deployment_name = self.constants.deployment_name
@@ -47,7 +53,7 @@ class AskViridium:
         return prompt
 
     def prompt2_init(self):
-        with open('modules/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
+        with open('system_prompt_templates/newprompt.txt', 'r') as file:
             analysis_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([
@@ -76,18 +82,39 @@ class AskViridium:
         )
         return [cheminfo_model, analysis_model]
 
-    def query(self, material_name, manufacturer_name: str = "Not Available", work_content: str = "Not Available"):
+    def log(self, time, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_cheminfo, cost_analysis):
+        self.loginfo["time"] = time
+        self.loginfo["material_name"] = material_name
+        self.loginfo["manufacturer_name"] = manufacturer_name
+        self.loginfo["tokens_used_for_chemical_composition"] = tokens_for_cheminfo
+        self.loginfo["cost_chemical_composition"] = cost_cheminfo
+        self.loginfo["tokens_used_for_analysis"] = tokens_for_analysis
+        self.loginfo["cost_analysis"] = cost_analysis
+        self.loginfo["total_cost"] = cost_analysis + cost_cheminfo
+
+        self.logger.log(info=self.loginfo)
+
+    def query(self, material_name, manufacturer_name: Optional[str] = "Not Available", work_content: Optional[str] = "Not Available"):
         material = material_name
         manufacturer = manufacturer_name
         work_content = work_content
+        rn = time.time()
 
-        self.chemical_composition = self.cheminfo_chain.invoke(
-            {"material": material, "example": self.constants.chemical_composition_example})
-        chemicals_list = [chemical["name"] for chemical in self.chemical_composition["chemicals"]]
+        with get_openai_callback() as cb:
+            self.chemical_composition = self.cheminfo_chain.invoke(
+                {"material": material, "example": self.constants.chemical_composition_example})
+            chemicals_list = [chemical["name"] for chemical in self.chemical_composition["chemicals"]]
+            tokens_for_cheminfo = cb.total_tokens
+            cost_for_cheminfo = cb.total_cost
 
-        self.result = self.analysis_chain.invoke(
-            {"material": material, "manufacturer": manufacturer, "usecase": work_content,
-             "chemical_composition": chemicals_list, "example": self.constants.analysis_example})
+        with get_openai_callback() as cb:
+            self.result = self.analysis_chain.invoke(
+                {"material": material, "manufacturer": manufacturer, "usecase": work_content,
+                 "chemical_composition": chemicals_list, "example": self.constants.analysis_example})
+            tokens_for_analysis = cb.total_tokens
+            cost_for_analysis = cb.total_cost
+
+        self.log(rn, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_for_cheminfo, cost_for_analysis)
 
         return self.result
 
