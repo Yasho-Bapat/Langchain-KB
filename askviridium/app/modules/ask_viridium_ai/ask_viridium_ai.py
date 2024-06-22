@@ -1,6 +1,6 @@
 import dotenv
 import json
-from typing import Optional
+from typing import Optional, List
 import time
 
 from langchain.prompts import ChatPromptTemplate
@@ -38,7 +38,8 @@ class AskViridium:
         self.parser = JsonOutputFunctionsParser()
         self.cheminfo_chain = self.cheminfo_prompt | self.cheminfo_model | self.parser
         self.analysis_chain = self.analysis_prompt | self.analysis_model | self.parser
-        self.chemical_composition = None
+        self.chemical_composition: List[str]
+        self.pfas: bool
 
         self.result = str()
 
@@ -91,6 +92,8 @@ class AskViridium:
         self.loginfo["tokens_used_for_analysis"] = tokens_for_analysis
         self.loginfo["cost_analysis"] = cost_analysis
         self.loginfo["total_cost"] = cost_analysis + cost_cheminfo
+        self.loginfo["chemical_composition"] = self.chemical_composition
+        self.loginfo["PFAS_status"] = self.pfas
 
         self.logger.log(info=self.loginfo)
 
