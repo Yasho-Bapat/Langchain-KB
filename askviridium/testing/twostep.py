@@ -3,6 +3,7 @@ import os
 from typing import List
 import dotenv
 
+from langchain_community.callbacks import get_openai_callback
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.utils.function_calling import convert_to_openai_function
@@ -129,18 +130,22 @@ material = "Nitrogen, Cryogenic Liquid"
 manufacturer = "Matheson Tri-Gas, Inc."
 work_content = "Heat Treatment, Hipping, Annealing and Tempering"
 
-chemical_composition = chain_cheminfo.invoke({"material": material, "example": chemical_composition_example})
-
+with get_openai_callback() as cb:
+    chemical_composition = chain_cheminfo.invoke({"material": material, "example": chemical_composition_example})
+    print(cb)
 print(chemical_composition)
 chemicals_list = [chemical["name"] for chemical in chemical_composition["chemicals"]]
 
-result_s = chain_s.invoke({"material": material, "example": analysis_example})
-result_c = chain_c.invoke({"material": material, "manufacturer": manufacturer, "usecase":work_content, "chemical_composition": chemicals_list, "example": analysis_example})
+
+#result_s = chain_s.invoke({"material": material, "example": analysis_example})
+with get_openai_callback() as cb:
+    result_c = chain_c.invoke({"material": material, "manufacturer": manufacturer, "usecase":work_content, "chemical_composition": chemicals_list, "example": analysis_example})
+    print(cb.prompt_tokens, cb.total_tokens, cb.total_cost)
 
 
 # saving results
-with open ("simple_twostep.json", 'w') as file:
-    json.dump(result_s, file)
+# with open ("simple_twostep.json", 'w') as file:
+#     json.dump(result_s, file)
 
 with open("compound_twostep.json", 'w') as file:
     json.dump(result_c, file)
@@ -148,8 +153,8 @@ with open("compound_twostep.json", 'w') as file:
 
 #printing results
 print()
-print("SIMPLE")
-print(result_s)
-print()
+# print("SIMPLE")
+# print(result_s)
+# print()
 print("COMPOUND")
 print(result_c)
