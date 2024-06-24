@@ -24,12 +24,6 @@ class MainRoutes:
             methods=[self.global_constants.rest_api_methods.post],
         )
 
-        self.blueprint.add_url_rule(
-            "/retry-ask-viridium-ai",
-            view_func=self.retry_ask_viridium_ai,
-            methods=[self.global_constants.rest_api_methods.post],
-        )
-
         self.blueprint.add_url_rule("/health", view_func=self.health_check)
 
     def return_api_response(self, status, message, result=None, additional_data=None):
@@ -78,12 +72,6 @@ class MainRoutes:
             self.global_constants.api_response_messages.success,
             ask_vai.result,
         )
-
-    def retry_ask_viridium_ai(self):
-        request_data = request.get_json()
-        required_params = [
-            self.constants.input_parameters["material_name"],
-        ]
 
     def health_check(self):
         """

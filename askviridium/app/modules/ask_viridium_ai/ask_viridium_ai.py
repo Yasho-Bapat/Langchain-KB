@@ -98,7 +98,7 @@ class AskViridium:
 
         self.logger.log(info=self.loginfo)
 
-    def query(self, material_name, manufacturer_name: Optional[str] = "Not Available", work_content: Optional[str] = "Not Available"):
+    def query(self, material_name, manufacturer_name: Optional[str] = "Not Available", work_content: Optional[str] = "Not Available", additional_info: Optional[str] = None):
         material = material_name
         manufacturer = manufacturer_name
         work_content = work_content
@@ -123,7 +123,8 @@ class AskViridium:
         self.log(rn, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_for_cheminfo, cost_for_analysis, chemicals_list)
         self.logger.save()
 
-        self.store()
+        store = self.store()
+        print(store)
 
         return self.result
 
@@ -147,6 +148,8 @@ class AskViridium:
         # Write the updated data back to the file
         with open("data.json", 'w') as file:
             json.dump(data, file, indent=4)
+
+        return "results saved"
 
 
 if __name__ == '__main__':

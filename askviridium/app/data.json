@@ -1,0 +1,42 @@
+[
+    {
+        "analyzed_material": "Nitrogen Cryogenic Liquid",
+        "composition": "Nitrogen",
+        "analysis_method": "Literature review, chemical composition analysis",
+        "decision": "PFAS (No)",
+        "confidence": 1.0,
+        "primary_reason": "Nitrogen is a diatomic molecule (N2) and does not contain carbon-fluorine bonds, which are characteristic of PFAS.",
+        "secondary_reason": null,
+        "evidence": [
+            "Nitrogen (N2) is a well-known diatomic molecule with no PFAS characteristics.",
+            "Literature and chemical databases confirm that nitrogen does not contain PFAS."
+        ],
+        "health_problems": [
+            "Asphyxia due to displacement of oxygen in confined spaces"
+        ],
+        "confidence_level": "High",
+        "recommendation": "No further investigation is needed as the analyzed material is not expected to contain PFAS.",
+        "suggestion": null,
+        "limitations_and_uncertainties": null
+    },
+    {
+        "analyzed_material": "Nitrogen Cryogenic Liquid",
+        "composition": "Nitrogen",
+        "analysis_method": "Literature review, chemical composition analysis",
+        "decision": "PFAS (No)",
+        "confidence": 1.0,
+        "primary_reason": "Nitrogen is a diatomic molecule (N2) and does not contain carbon-fluorine bonds, which are characteristic of PFAS.",
+        "secondary_reason": null,
+        "evidence": [
+            "Nitrogen is a well-known element and its properties are well-documented in scientific literature.",
+            "Lack of any fluorinated compounds in the chemical composition."
+        ],
+        "health_problems": [
+            "Asphyxia due to displacement of oxygen in confined spaces"
+        ],
+        "confidence_level": "High",
+        "recommendation": "No further investigation is needed as the analyzed material is not expected to contain PFAS.",
+        "suggestion": null,
+        "limitations_and_uncertainties": null
+    }
+]

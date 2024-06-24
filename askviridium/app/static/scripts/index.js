@@ -4,20 +4,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const chatInput = document.querySelector('.chat-input');
 
     // Initially disable send button and chat input
-    sendButton.disabled = true;
-    chatInput.disabled = true;
+    disableChat();
 
     askButton.addEventListener('click', () => {
         handleAskAIClick();
     });
 
     sendButton.addEventListener('click', () => {
-        handleClick();
+        handleAskAIClick();
     });
 
     chatInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-            handleClick();
+            handleAskAIClick();
         }
     });
 });
@@ -60,7 +59,7 @@ function handleAskAIClick() {
         });
 }
 
-function handleClick() {
+function handleRetryClick() {
     const chatInput = document.querySelector('.chat-input');
     const message = chatInput.value.trim();
 
@@ -71,7 +70,7 @@ function handleClick() {
 
     showSpinner();
 
-    fetch('/v1/ask-viridium-ai', {
+    fetch('/v1/retry-ask-viridium-ai', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -94,6 +93,7 @@ function handleClick() {
         })
         .finally(() => {
             hideSpinner();
+            disableChat();
         });
 }
 
@@ -138,6 +138,14 @@ function enableChat() {
 
     sendButton.disabled = false;
     chatInput.disabled = false;
+}
+
+function disableChat() {
+    const sendButton = document.querySelector('.send-button');
+    const chatInput = document.querySelector('.chat-input');
+
+    sendButton.disabled = true;
+    chatInput.disabled = true;
 }
 
 function showSpinner() {
