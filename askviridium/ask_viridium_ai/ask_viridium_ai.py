@@ -44,7 +44,7 @@ class AskViridium:
         self.result = str()
 
     def prompt1_init(self):
-        with open('modules/ask_viridium_ai/system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
+        with open('ask_viridium_ai/findchemicals_prompt.txt', 'r') as file:
             cheminfo_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([
@@ -54,7 +54,7 @@ class AskViridium:
         return prompt
 
     def prompt2_init(self):
-        with open('modules/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
+        with open('ask_viridium_ai/newprompt.txt', 'r') as file:
             analysis_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([

@@ -77,7 +77,7 @@ llm = AzureChatOpenAI(
 )
 
 
-with open('../../askviridium/ask_viridium_ai/system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
+with open('../../askviridium/ask_viridium_ai/findchemicals_prompt.txt', 'r') as file:
     cheminfo_system_prompt = file.read()
 
 prompt = ChatPromptTemplate.from_messages([
@@ -87,7 +87,7 @@ prompt = ChatPromptTemplate.from_messages([
 
 
 # reading the system message from an external file (easy to track).
-with open('../../askviridium/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
+with open('../../askviridium/ask_viridium_ai/newprompt.txt', 'r') as file:
     analysis_system_prompt = file.read()
 
 

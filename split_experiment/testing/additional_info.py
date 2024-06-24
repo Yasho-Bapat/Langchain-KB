@@ -120,7 +120,7 @@ llm = AzureChatOpenAI(
     max_tokens=800,
 )
 
-with open('../../askviridium/ask_viridium_ai/system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
+with open('../../askviridium/ask_viridium_ai/findchemicals_prompt.txt', 'r') as file:
     chemical_template = file.read()
 
 chemical_prompt = ChatPromptTemplate.from_messages([

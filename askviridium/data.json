@@ -38,5 +38,46 @@
         "recommendation": "No further investigation is needed as the analyzed material is not expected to contain PFAS.",
         "suggestion": null,
         "limitations_and_uncertainties": null
+    },
+    {
+        "analyzed_material": "Vitrified Bonded Stick",
+        "composition": "Silicon Carbide, Aluminum Oxide, Clay, Feldspar",
+        "analysis_method": "Literature review, trade name association",
+        "decision": "PFAS (No)",
+        "confidence": 0.95,
+        "primary_reason": "The listed components (Silicon Carbide, Aluminum Oxide, Clay, Feldspar) are inorganic materials that do not contain PFAS.",
+        "secondary_reason": null,
+        "evidence": [
+            "Trade name association with non-PFAS materials",
+            "Lack of information suggesting PFAS presence in the listed components"
+        ],
+        "health_problems": [],
+        "confidence_level": "High",
+        "recommendation": "No further investigation is needed as the analyzed materials are not expected to contain PFAS.",
+        "suggestion": null,
+        "limitations_and_uncertainties": null
+    },
+    {
+        "analyzed_material": "Vitrified Bonded Stick",
+        "composition": "Silicon Carbide, Aluminum Oxide, Kaolin, Feldspar",
+        "analysis_method": "Literature review, trade name association",
+        "decision": "PFAS (No)",
+        "confidence": 0.95,
+        "primary_reason": "The listed components (Silicon Carbide, Aluminum Oxide, Kaolin, Feldspar) are inorganic materials that do not contain PFAS.",
+        "secondary_reason": null,
+        "evidence": [
+            "Scientific literature confirming the inorganic nature of the listed components",
+            "Lack of information suggesting PFAS presence in these materials"
+        ],
+        "health_problems": [
+            "Silicon Carbide: Respiratory issues if inhaled",
+            "Aluminum Oxide: Respiratory issues if inhaled",
+            "Kaolin: Generally considered safe, but inhalation of dust can cause respiratory issues",
+            "Feldspar: Generally considered safe, but inhalation of dust can cause respiratory issues"
+        ],
+        "confidence_level": "High",
+        "recommendation": "No further investigation is needed as the analyzed materials are not expected to contain PFAS.",
+        "suggestion": null,
+        "limitations_and_uncertainties": null
     }
 ]

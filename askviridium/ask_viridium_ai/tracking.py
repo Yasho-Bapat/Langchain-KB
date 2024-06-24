@@ -28,4 +28,4 @@ class Logger:
         self.df = pd.concat([self.df, tdf])
 
     def save(self):
-        self.df.to_csv('modules/ask_viridium_ai/log.csv', index=False)
+        self.df.to_csv('ask_viridium_ai/log.csv', index=False)
