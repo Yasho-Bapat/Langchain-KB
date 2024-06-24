@@ -11,14 +11,14 @@ from langchain_community.callbacks import get_openai_callback
 
 from askviridium.app.global_constants import GlobalConstants
 from askviridium.app.models import ChemicalComposition, MaterialInfo
-from tracking import Logger
+from .tracking import Logger
 
 dotenv.load_dotenv()
 
 
 class AskViridium:
     def __init__(self):
-        self.logger = Logger
+        self.logger = Logger()
         self.loginfo = dict()
         self.constants = GlobalConstants()
         self.model_name = self.constants.model_name
@@ -44,7 +44,7 @@ class AskViridium:
         self.result = str()
 
     def prompt1_init(self):
-        with open('system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
+        with open('modules/ask_viridium_ai/system_prompt_templates/findchemicals_prompt.txt', 'r') as file:
             cheminfo_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([
@@ -54,7 +54,7 @@ class AskViridium:
         return prompt
 
     def prompt2_init(self):
-        with open('system_prompt_templates/newprompt.txt', 'r') as file:
+        with open('modules/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
             analysis_system_prompt = file.read()
 
         prompt = ChatPromptTemplate.from_messages([

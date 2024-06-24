@@ -30,9 +30,16 @@ function handleAskAIClick() {
         },
         body: JSON.stringify({ material_name: materialNameInput.value, manufacturer_name: manufacturerInput.value, work_content: workContentInput.value })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok){
+                throw new Error("Error in network repsonse");
+            }
+            return response.json()
+        })
         .then(data => {
-            displayMessage('AI', data.response);
+            console.log(data.result)
+            displayMessage('AI', data.result);
+            enableChat();
         })
         .catch(error => {
             console.error('Error:', error);
@@ -56,10 +63,14 @@ function handleClick() {
         },
         body: JSON.stringify({ message: message })
         })
-        .then(response => response.json())
+        .then(response => {
+            response.json()
+            disableChat();
+        })
         .then(data => {
             console.log(data.response)
-            displayMessage('AI', data.response);
+            displayMessage('AI', data.result);
+            disableChat();
         })
         .catch(error => {
             console.error('Error:', error);
