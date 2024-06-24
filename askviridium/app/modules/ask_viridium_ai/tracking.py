@@ -24,7 +24,8 @@ class Logger:
 
         data = [time, user_id, material_name, tokens_used_for_chemical_composition, cost_chemical_composition,
                 tokens_used_for_analysis, cost_analysis, total_cost, chemical_composition, pfas]
-        self.df = self.df._append(data)
+        tdf = pd.DataFrame(data, columns=self.columns)
+        self.df = self.df.concat([self.df, tdf])
 
     def save(self):
         self.df.to_csv('modules/ask_viridium_ai/log.csv', index=False)
