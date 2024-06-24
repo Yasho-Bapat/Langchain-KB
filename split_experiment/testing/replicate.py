@@ -56,7 +56,7 @@ example = {
 }
 
 # reading the system message from an external file (easy to track).
-with open('../app/modules/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
+with open('../../askviridium/ask_viridium_ai/system_prompt_templates/newprompt.txt', 'r') as file:
     template = file.read()
 
 # Initialize output parser.

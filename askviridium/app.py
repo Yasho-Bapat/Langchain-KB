@@ -1,17 +1,17 @@
 from dotenv import load_dotenv
 
-from askviridium.app.modules.ask_viridium_ai.routes import MainRoutes
+from ask_viridium_ai.routes import MainRoutes
 
 load_dotenv()
 
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, jsonify, redirect
 from flask_cors import CORS
 from apispec import APISpec
 from flask_swagger_ui import get_swaggerui_blueprint
 from apispec.ext.marshmallow import MarshmallowPlugin
 from apispec_webframeworks.flask import FlaskPlugin
 
-from askviridium.app.global_constants import GlobalConstants
+from global_constants import GlobalConstants
 
 global_constants = GlobalConstants
 
