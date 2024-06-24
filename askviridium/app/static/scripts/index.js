@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const sendButton = document.querySelector('.send-button');
     const chatInput = document.querySelector('.chat-input');
 
+    // Initially disable send button and chat input
+    sendButton.disabled = true;
+    chatInput.disabled = true;
+
     askButton.addEventListener('click', () => {
         handleAskAIClick();
     });
@@ -23,6 +27,12 @@ function handleAskAIClick() {
     const manufacturerInput = document.querySelector('.manufacturer-input');
     const workContentInput = document.querySelector('.work-content-input');
 
+    // Clear the chat window
+    const chatWindow = document.querySelector('.chat-messages');
+    chatWindow.innerHTML = '';
+
+    showSpinner();
+
     fetch('/v1/ask-viridium-ai', {
         method: 'POST',
         headers: {
@@ -32,18 +42,21 @@ function handleAskAIClick() {
         })
         .then(response => {
             if (!response.ok){
-                throw new Error("Error in network repsonse");
+                throw new Error("Error in network response");
             }
-            return response.json()
+            return response.json();
         })
         .then(data => {
-            console.log(data.result)
+            console.log(data.result);
             displayMessage('AI', data.result);
             enableChat();
         })
         .catch(error => {
             console.error('Error:', error);
             displayMessage('Error', 'An error occurred while getting the response from AI.');
+        })
+        .finally(() => {
+            hideSpinner();
         });
 }
 
@@ -56,6 +69,8 @@ function handleClick() {
         chatInput.value = '';
     }
 
+    showSpinner();
+
     fetch('/v1/ask-viridium-ai', {
         method: 'POST',
         headers: {
@@ -64,17 +79,21 @@ function handleClick() {
         body: JSON.stringify({ message: message })
         })
         .then(response => {
-            response.json()
-            disableChat();
+            if (!response.ok){
+                throw new Error("Error in network response");
+            }
+            return response.json();
         })
         .then(data => {
-            console.log(data.response)
+            console.log(data.response);
             displayMessage('AI', data.result);
-            disableChat();
         })
         .catch(error => {
             console.error('Error:', error);
             displayMessage('Error', 'An error occurred while getting the response from AI.');
+        })
+        .finally(() => {
+            hideSpinner();
         });
 }
 
@@ -82,6 +101,49 @@ function displayMessage(sender, message) {
     const chatWindow = document.querySelector('.chat-messages');
     const messageElement = document.createElement('div');
     messageElement.classList.add('message');
-    messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+
+    if (typeof message === 'object') {
+        messageElement.innerHTML = `<strong>${sender}:</strong><br>${formatMessage(message)}`;
+    } else {
+        messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    }
+
     chatWindow.appendChild(messageElement);
+    chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to the bottom
+}
+
+function formatMessage(data) {
+    let formattedMessage = '<div class="formatted-message">';
+    for (const [key, value] of Object.entries(data)) {
+        formattedMessage += `<div><strong>${formatKey(key)}:</strong> ${formatValue(value)}</div>`;
+    }
+    formattedMessage += '</div>';
+    return formattedMessage;
+}
+
+function formatKey(key) {
+    return key.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function formatValue(value) {
+    if (Array.isArray(value)) {
+        return `<ul>${value.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    }
+    return value !== null ? value : 'N/A';
+}
+
+function enableChat() {
+    const sendButton = document.querySelector('.send-button');
+    const chatInput = document.querySelector('.chat-input');
+
+    sendButton.disabled = false;
+    chatInput.disabled = false;
+}
+
+function showSpinner() {
+    document.getElementById('spinnerOverlay').style.display = 'flex';
+}
+
+function hideSpinner() {
+    document.getElementById('spinnerOverlay').style.display = 'none';
 }

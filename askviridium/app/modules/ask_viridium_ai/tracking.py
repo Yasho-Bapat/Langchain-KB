@@ -6,7 +6,7 @@ class Logger:
         self.columns = [
             'time', 'user_id', 'material_name',
             'tokens_used_for_chemical_composition', 'cost_chemical_composition',
-            'tokens_used_for_analysis', 'cost_analysis', 'total_cost', 'chemical_composition', 'pfas'
+            'tokens_used_for_analysis', 'cost_analysis', 'total_cost', 'chemical_composition', 'PFAS_status'
         ]
         self.df = pd.DataFrame(columns=self.columns)
 
@@ -20,12 +20,12 @@ class Logger:
         cost_analysis = info["cost_analysis"]
         total_cost = info["total_cost"]
         chemical_composition = info["chemical_composition"]
-        pfas = info["pfas"]
+        pfas = info["PFAS_status"]
 
         data = [time, user_id, material_name, tokens_used_for_chemical_composition, cost_chemical_composition,
                 tokens_used_for_analysis, cost_analysis, total_cost, chemical_composition, pfas]
-        tdf = pd.DataFrame(data, columns=self.columns)
-        self.df = self.df.concat([self.df, tdf])
+        tdf = pd.DataFrame(info, index=[0])
+        self.df = pd.concat([self.df, tdf])
 
     def save(self):
         self.df.to_csv('modules/ask_viridium_ai/log.csv', index=False)

@@ -38,8 +38,8 @@ class AskViridium:
         self.parser = JsonOutputFunctionsParser()
         self.cheminfo_chain = self.cheminfo_prompt | self.cheminfo_model | self.parser
         self.analysis_chain = self.analysis_prompt | self.analysis_model | self.parser
-        self.chemical_composition: List[str]
-        self.pfas: bool
+        self.chemical_composition = None
+        self.pfas = None
 
         self.result = str()
 
@@ -60,7 +60,7 @@ class AskViridium:
         prompt = ChatPromptTemplate.from_messages([
             ("system", analysis_system_prompt),
             ("human",
-             "Material Name: {material}, manufactured by {manufacturer}. CONTEXT: used as {usecase}. Its chemical composition is: {chemical_composition}")
+             "Material Name: {material}, manufactured by {manufacturer}. CONTEXT: used as {usecase}. Its chemical composition is: {chemical_composition}. Additional info: {additional_info}")
         ])
         return prompt
 
@@ -83,7 +83,7 @@ class AskViridium:
         )
         return [cheminfo_model, analysis_model]
 
-    def log(self, time, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_cheminfo, cost_analysis):
+    def log(self, time, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_cheminfo, cost_analysis, chemlist):
         self.loginfo["time"] = time
         self.loginfo["material_name"] = material_name
         self.loginfo["manufacturer_name"] = manufacturer_name
@@ -92,8 +92,9 @@ class AskViridium:
         self.loginfo["tokens_used_for_analysis"] = tokens_for_analysis
         self.loginfo["cost_analysis"] = cost_analysis
         self.loginfo["total_cost"] = cost_analysis + cost_cheminfo
-        self.loginfo["chemical_composition"] = self.chemical_composition
+        self.loginfo["chemical_composition"] = str(chemlist)
         self.loginfo["PFAS_status"] = self.pfas
+        self.loginfo["user_id"] = "umesh" # placeholder
 
         self.logger.log(info=self.loginfo)
 
@@ -113,18 +114,39 @@ class AskViridium:
         with get_openai_callback() as cb:
             self.result = self.analysis_chain.invoke(
                 {"material": material, "manufacturer": manufacturer, "usecase": work_content,
-                 "chemical_composition": chemicals_list, "example": self.constants.analysis_example})
+                 "chemical_composition": chemicals_list, "example": self.constants.analysis_example, 
+                 "additional_info": None})
             tokens_for_analysis = cb.total_tokens
             cost_for_analysis = cb.total_cost
+            self.pfas = self.result["decision"]
 
-        self.log(rn, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_for_cheminfo, cost_for_analysis)
+        self.log(rn, material_name, manufacturer_name, tokens_for_cheminfo, tokens_for_analysis, cost_for_cheminfo, cost_for_analysis, chemicals_list)
+        self.logger.save()
+
+        self.store()
 
         return self.result
 
+    def handle_user_query(self, additional_info, material, manufacturer, work_content, chemicals_list):
+        with get_openai_callback() as cb:
+            self.result = self.analysis_chain.invoke(
+                {"material": material, "manufacturer": manufacturer, "usecase": work_content,
+                 "chemical_composition": chemicals_list, "example": self.constants.analysis_example,
+                 "additional_info": additional_info})
     def store(self):
-        # saving results
-        with open("compound_twostep.json", 'w') as file:
-            json.dump(self.result, file)
+        # Read existing data from the file
+        try:
+            with open("data.json", 'r') as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            data = []
+
+        # Append the new result
+        data.append(self.result)
+
+        # Write the updated data back to the file
+        with open("data.json", 'w') as file:
+            json.dump(data, file, indent=4)
 
 
 if __name__ == '__main__':
